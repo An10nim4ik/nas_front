@@ -14,6 +14,10 @@ main div{
     padding: 10px 10px 10px 10px;
 }
 
+body{
+    background-image: url(../imgs/3407044.jpg);
+}
+
 main{
     height: 100%;
 }
