@@ -1,0 +1,23 @@
+main section{
+    margin-top: 10px;
+    border-right: 2.5px groove;
+    width: 60%;
+    border-left: 2.5px groove;
+    border-color: rgb(50, 50, 50);
+    color: black;
+    height:fit-content;
+    text-align: center;
+    justify-self: center;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    background-color: rgb(50,50,50);
+    padding: 10px 10px 10px 10px;
+}
+
+main h1,h2,h3,h4,h5,h6,p{
+    color: white;
+}
+
+body{
+    background-image: url(../imgs/3407044.jpg);
+}
