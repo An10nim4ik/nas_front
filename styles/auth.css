@@ -36,10 +36,34 @@ main{
 .auth-box_btn button{
     border-color: black;
     border-style: solid;
+    background-color: rgb(0, 80, 228);
+    color: white;
 }
 
 .auth-box_btn button:hover{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.input_field{
+    font-family: "Roboto Condensed", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#nas{
+    font-family:  "Lobster", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color:black;
+}
+
+label{
+    font-family: "Roboto Condensed", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
 }
 
 .auth-box_box-rg{
