@@ -10,19 +10,6 @@ main{
     display: grid;
 }
 
-.auth-box input{
-    display:flex;
-    width:100%;
-    height: 30px;
-    justify-content: center;
-}
-
-.auth-box_box-lg{
-    border-style: solid;
-    border-color: black;
-    width: 100%;
-}
-
 .auth-box_btn{
     display: flex;
     justify-self:center;
@@ -33,20 +20,69 @@ main{
     height: 60px;
 }
 
-.auth-box_btn button{
+button{
     border-color: black;
     border-style: solid;
+    background-color: rgb(0, 80, 228);
+    color: #f1f1f1;
+    width: 100%;
+    font-family:"Roboto", sans-serif;
 }
 
-.auth-box_btn button:hover{
+button:hover{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+.input_field{
+    margin: 5px 5px 5px 5px;
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    display:flex;
+    width:100%;
+    height: 30px;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+#nas{
+    font-family:  "Lobster", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color:black;
+}
+
+label{
+    margin: 5px 5px 5px 5px;
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .auth-box_box-rg{
     border-style: solid;
     border-color: #f1f1f1;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+}
 
+.auth-box_box-rg h2{
+    color: black;
+}
+
+.auth-box_box-lg{
+    border-style: solid;
+    border-color: black;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: black;
 }
 
 .auth-box label{
@@ -62,7 +98,7 @@ main{
 .auth-box_box{
     display:flex;
     justify-content: space-around;
-
+    margin: 10px 10px 10px 10px;
 }
 
 .auth-box{
@@ -73,7 +109,7 @@ main{
     width: 400px;
     height: 100%;
     border-color: black;
-    border-radius: 2px;
+    border-radius: 10px;
     border:2.5px; 
     border-style: solid;    
     justify-content: center;

@@ -3,6 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" 
+    href="https://fonts.googleapis.com">
+    <link rel="preconnect" 
+    href="https://fonts.gstatic.com" 
+    crossorigin>
+    <link
+    href="https://fonts.googleapis.com/css2?family=Anton&family=Lobster&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" 
+    rel="stylesheet">
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/auth.css">
     <title>Document</title>
@@ -10,30 +18,32 @@
 <body>
     <main>
         <div class="auth-box">
-            <h1>NAS</h1>
+            <h1 id="nas">NAS</h1>
             <div class="auth-box_box">
                 <div class="auth-box_box-lg">
-                    <h2>
-                        Sign in
-                    </h2>
+                    <button>
+                        Sing in
+                    </button>
                 </div> 
                 <div class="auth-box_box-rg">
-                    <h2>
+                    <button>
                         Sign up
-                    </h2>
+                    </button>
                 </div>
             </div>    
-                <form action="">
+            <form action="">
                 <label for="fname">First name:<br></label>
-                <input type="text"  placeholder="example: John" id="fname" name="fname">
+                <input class="input_field" type="text"  placeholder="example: John" id="fname" name="fname" required>
                 <label for="lname">Last name:</label>
-                <input type="text" placeholder="example: Doe" id="lname" name="lname">
+                <input class="input_field" type="text" placeholder="example: Doe" id="lname" name="lname">
+                <label for="email">Email:</label>
+                <input class="input_field" type="email" placeholder="example@mail.com" id="email" name="email" required>
                 <label for="psw">Password:</label>
-                <input type="password" id="psw" name="psw">
+                <input class="input_field" type="password" id="psw" name="psw" required>
                 <label for="pswrpt">Repeat Password:</label>
-                <input type="password" id="pswrpt" name="pswrpt">
+                <input class="input_field" type="password" id="pswrpt" name="pswrpt" required>
                 <div class="auth-box_btn">
-                    <button onclick="pswfunc()">Sumbit</button>
+                    <button onclick="pswfunc()">Submit</button>
                 </div>
             </form>
         </div>
