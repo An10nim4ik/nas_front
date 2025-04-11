@@ -23,6 +23,7 @@ main h1, h2, h3, h4, h5, h6, p{
     color: white;
 }
 
+<<<<<<< HEAD
 
 .section-about {
     height: 640px;
@@ -62,4 +63,8 @@ main h1, h2, h3, h4, h5, h6, p{
 .section-about__text {
     font-size: 12px;
     margin: 0;
+=======
+body{
+    background-image: url(../imgs/3407044.jpg);
+>>>>>>> 8afe9efdc598101f137b09533667e6430ccf2497
 }
