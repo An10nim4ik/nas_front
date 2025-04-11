@@ -1,0 +1,4 @@
+Sultan: Make 3 pages for Frontend
+News Page
+Job Page
+My applications Page

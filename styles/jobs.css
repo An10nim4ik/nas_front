@@ -1,0 +1,103 @@
+body{
+    background-color: #0D1B2A;
+}
+
+.section-about {
+    height: 640px;
+    background: url(../imgs/Woodworker\ at\ Work.jpeg) center/cover no-repeat;
+    position: relative;
+    margin-bottom: 15px;
+
+}
+
+.section-about__block {
+    width: 420px;
+    height: 190px;
+    /*background: linear-gradient(180deg, rgba(244, 213, 178, 0.8) 0%,
+    rgba(234, 156, 65, 0.8) 100%);*/
+    position: absolute;
+    top: 40%;
+    left: 20%;
+    text-align: left;
+    padding-top: 15px;
+    padding-right: 0px;
+}
+
+.section-about__title {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 46px;
+    margin: 0;
+    margin-bottom: 9px;
+    color: aliceblue;
+
+}
+
+.section-about__text {
+    font-size: 12px;
+    margin: 0;
+    color: aliceblue;
+}
+
+@media screen and (max-width: 600px) {
+    .section-about__search[type=text] {
+        float: none;
+        display: block;
+        text-align: left;
+        width: 100%;
+        margin: 0;
+        padding: 14px;
+    }
+}
+
+.section-about__search[type=text] {
+    border: 1px solid #ccc;
+    height: 40px;
+    width: 350px;
+}
+.section-about_icon{
+    position: relative;
+    height: 29px;
+    width: 15px;
+}
+
+.wrapper {
+    position: relative;
+    display: flex;
+    min-width: 100px;
+}
+
+
+.search-icon {
+    color: #E0E1DD;
+    top: 6px;
+    left: 8px;
+    width: 14px;
+    margin: 0px 5px 0px 5px;
+}
+
+.clear-icon {
+    color: #778DA9;
+    top: 8px;
+    right: 8px;
+    width: 10px;
+    cursor: pointer;
+    visibility: hidden;
+}
+
+
+.search {
+    border: 1px solid 778DA9;
+    border-radius: 5px;
+    height: 20px;
+    padding: 2px 23px 2px 30px;
+    outline: 0;
+    background-color: #f5f5f5;
+}
+
+
+.search:hover,
+.search:focus {
+    border: 1.5px solid #009688;
+    background-color: white;
+}
+
