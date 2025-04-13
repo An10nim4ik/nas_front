@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sidebar Jump Links</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      display: flex;
+      scroll-behavior: smooth;
+    }
+
+    /* Sidebar styling */
+    .sidebar {
+      width: 60px;
+      background-color: #f0f2f5;
+      padding: 20px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: fixed;
+      height: 100vh;
+    }
+
+    .sidebar a {
+      display: block;
+      width: 30px;
+      height: 30px;
+      margin: 10px 0;
+      text-align: center;
+      line-height: 30px;
+      border-radius: 50%;
+      background-color: #e0e0e0;
+      color: black;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .sidebar a.active {
+      background-color: #467bff;
+      color: white;
+    }
+
+    /* Main content area */
+    .content {
+      margin-left: 80px;
+      padding: 40px;
+    }
+
+    .section {
+      margin-bottom: 100px;
+      padding: 20px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .section h2 {
+      margin-top: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sidebar with jump links -->
+  <div class="sidebar">
+    <a href="#section1" class="active">1</a>
+    <a href="#section2">2</a>
+    <a href="#section3">3</a>
+    <a href="#section4">4</a>
+    <a href="#section5">5</a>
+    <a href="#section6">6</a>
+  </div>
+
+  <!-- Main content sections -->
+  <div class="content">
+    <div id="section1" class="section">
+      <h2>Ключевые моменты</h2>
+      <p>Содержимое блока 1...</p>
+    </div>
+
+    <div id="section2" class="section">
+      <h2>65%</h2>
+      <p>Содержимое блока 2...</p>
+    </div>
+
+    <div id="section3" class="section">
+      <h2>57.4 тыс.</h2>
+      <p>Содержимое блока 3...</p>
+    </div>
+
+    <div id="section4" class="section">
+      <h2>Уровни занятости</h2>
+      <p>Содержимое блока 4...</p>
+    </div>
+
+    <div id="section5" class="section">
+      <h2>Еще данные</h2>
+      <p>Содержимое блока 5...</p>
+    </div>
+
+    <div id="section6" class="section">
+      <h2>Финальный блок</h2>
+      <p>Содержимое блока 6...</p>
+    </div>
+  </div>
+
+</body>
+</html>

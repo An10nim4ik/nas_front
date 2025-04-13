@@ -1,14 +1,12 @@
-let a = 10
-let b = 20
-
-function sum(a, b) {
-    const c = a + b
-    console.log(c)
+const personOne = {
+    name: 'Bob',
+    age: 20
 }
 
-sum(a, b)
+function increasePersonAge(person) {
+    person.age += 1
+    return person
+}
 
-a = 5
-b = 3
-
-sum(a, b)
+increasePersonAge(personOne)
+console.log(personOne.age)

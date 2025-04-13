@@ -1,42 +1,65 @@
-.news{
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #F8F9FA;
+
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+.news {
     align-items: center;
 
 }
 
-main div{
+main div {
     margin-top: 10px;
     border-right: 2.5px groove;
     width: 60%;
     border-left: 2.5px groove;
     border-color: rgb(50, 50, 50);
     color: black;
-    height:fit-content;
+    height: fit-content;
     text-align: center;
     justify-self: center;
     margin-bottom: 10px;
     border-radius: 10px;
-    background-color: rgb(50,50,50);
+    background-color: #ADB5BD;
     padding: 10px 10px 10px 10px;
 }
 
-main h1, h2, h3, h4, h5, h6, p{
-    color: white;
+main h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    color: #343A40;
 }
 
-<<<<<<< HEAD
 
 .section-about {
     height: 640px;
-    background: url(../imgs/Industrial\ Control\ Room.jpeg) center/cover  no-repeat;
+    background: url(../imgs/Industrial_Control_Room.jpeg) center/cover no-repeat;
     position: relative;
     margin-bottom: 15px;
 }
 
-.section-about__block { 
+.section-about__block {
     width: 420px;
     height: 190px;
-    background: linear-gradient(180deg, rgba(244, 213, 178, 0.8) 0%,
-    rgba(234, 156, 65, 0.8) 100%);
+
     position: absolute;
     top: 54%;
     left: 51%;
@@ -45,14 +68,6 @@ main h1, h2, h3, h4, h5, h6, p{
     padding-right: 0px;
 }
 
-.section-about__border{
-    width: 390px;
-    height: 160px;
-    border: 1px solid black;
-    margin: 0 auto; 
-    padding: 17px 0 0 28px;
-    text-align: left;
-}
 
 .section-about__title {
     font-size: 36px;
@@ -63,8 +78,5 @@ main h1, h2, h3, h4, h5, h6, p{
 .section-about__text {
     font-size: 12px;
     margin: 0;
-=======
-body{
-    background-image: url(../imgs/3407044.jpg);
->>>>>>> 8afe9efdc598101f137b09533667e6430ccf2497
 }
+
