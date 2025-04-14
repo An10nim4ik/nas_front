@@ -13,39 +13,50 @@
     rel="stylesheet">
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/auth.css">
-    <script src="scripts/connect.js"></script>
-    <title>Document</title>
+    <title>Welcome Back!</title>
 </head>
 <body>
     <main>
         <div class="auth-box">
             <h1 id="nas">NAS</h1>
             <div class="auth-box_box">
-                <div class="auth-box_box-lg">
-                    <button>
-                        Sing in
+                <div id="regbtn" class="auth-box_box-lg">
+                    <button id="reg">
+                        Sing up
                     </button>
                 </div> 
-                <div class="auth-box_box-rg">
-                    <button>
-                        Sign up
+                <div id="loginbtn" class="auth-box_box-rg">
+                    <button id="login">
+                        Sign in
                     </button>
                 </div>
             </div>    
-            <label for="fname">First name:<br></label>
-            <input class="input_field" type="text"  placeholder="example: John" id="fname" name="fname" required>
-            <label for="lname">Last name:</label>
-            <input class="input_field" type="text" placeholder="example: Doe" id="lname" name="lname">
-            <label for="email">Email:</label>
-            <input class="input_field" type="email" placeholder="example@mail.com" id="email" name="email" required>
-            <label for="psw">Password:</label>
-            <input class="input_field" type="password" id="psw" name="psw" required>
-            <label for="pswrpt">Repeat Password:</label>
-            <input class="input_field" type="password" id="pswrpt" name="pswrpt" required>
-            <div class="auth-box_btn">
-                <a id="id1" href=""><button onclick="mynewfunc()">Submit</button></a>
+            <div id = "sign_up">
+                <label for="fname">First name:<br></label>
+                <input class="input_field" type="text"  placeholder="example: John" id="fname" name="fname" required>
+                <label for="lname">Last name:</label>
+                <input class="input_field" type="text" placeholder="example: Doe" id="lname" name="lname">
+                <label for="email">Email:</label>
+                <input class="input_field" type="email" placeholder="example@mail.com" id="email" name="email" required>
+                <label for="psw">Password:</label>
+                <input class="input_field" type="password" id="psw" name="psw" required>
+                <label for="pswrpt">Repeat Password:</label>
+                <input class="input_field" type="password" id="pswrpt" name="pswrpt" required>
+                <div class="auth-box_btn">
+                    <a id="id1" href=""><button onclick="mynewfunc()">Submit</button></a>
+                </div>
+            </div>
+            <div id = "sign_in">
+                <label for="email">Email:<br></label>
+                <input class="input_field" type="email" placeholder="example@check.com" id="email_sign_in" name="email" required>
+                <label for="password">Password:<br></label>
+                <input class="input_field" type="password" id="psw_sign_in" name="password" required>
+                <div class="auth-box_btn">
+                    <a id="id1" href=""><button onclick="mynewfunc()">Sign in</button></a>
+                </div>
             </div>
         </div>
     </main>
+    <script src="scripts/connect.js"></script>
 </body>
 </html>
