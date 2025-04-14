@@ -14,6 +14,23 @@ main div{
     padding: 10px 10px 10px 10px;
 }
 
+.cta-button {
+    background-color: #0048ff;
+    color: white;
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.cta-button:hover {
+    background-color: #0035b2;
+}
+
 body{
     background-image: url(../imgs/3407044.jpg);
 }
