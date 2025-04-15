@@ -2,7 +2,7 @@ footer{
     display: grid;
     grid-template-areas: "info rights copyright";
     justify-content: space-between;
-    background-color: rgb(50, 50, 50);
+    background-color: #0D1B2A;
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
     padding: 10px 15px 10px 15px;

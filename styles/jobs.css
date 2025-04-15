@@ -51,7 +51,7 @@ body{
 
 #vacancies div{
     border-radius: 15px;
-    margin: 5px 5px 5px 5px;
+    margin: 7.5px 7.5px 7.5px 7.5px;
     display: grid;
     grid-template-areas: 
     "p"
