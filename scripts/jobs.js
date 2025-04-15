@@ -23,8 +23,8 @@ async function displayData(vacancies){
         const vacancyDiv = document.createElement('div');
         vacancyDiv.innerHTML = `<h3>${vacancy.name}</h3>
             <p>Employer: ${vacancy.employer ? vacancy.employer.name : "N/A"}</p>
-            <a href="${vacancy.alternate_url}" target="_blank">View Vacancy</a>`;
+            <div class="link"><a href="${vacancy.alternate_url}" target="_blank">More information</a></div>`;
         container.appendChild(vacancyDiv);
-        
+
     });
 }
