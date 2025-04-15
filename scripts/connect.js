@@ -1,4 +1,4 @@
-let flag = true;
+let flag = false;
 
 function validate(){
     if(flag){
@@ -13,9 +13,9 @@ function register(){
     let datas = regdata.children;
     var flag1 = true;
     for(let data of datas){
-        if(data.tagName() == "INPUT"){
+        if(data.tagName == "INPUT"){
             let x = data;
-            if(x.value() == ""){
+            if(x.value == ""){
                 flag1 = false;
                 break;
             }
@@ -29,7 +29,23 @@ function register(){
 }
 
 function login(){
-
+    const regdata = document.getElementById("sign_in");
+    let datas = regdata.children;
+    var flag1 = true;
+    for(let data of datas){
+        if(data.tagName == "INPUT"){
+            let x = data;
+            if(x.value == ""){
+                flag1 = false;
+                break;
+            }
+        }
+    }
+    if(!flag1){
+        alert("Please try again! You may have not written information in all of the lanes!");
+    }else{
+        window.location.href = "index.html";
+    }
 }
 
 window.onload=function(){ 
