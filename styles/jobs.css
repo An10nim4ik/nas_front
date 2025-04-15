@@ -2,48 +2,6 @@ body{
     background-image: url(../imgs/3407044.jpg);
 }
 
-/* .section-about {
-    height: 640px;
-    background: url(../imgs/Woodworker\ at\ Work.jpeg) center/cover  no-repeat;
-    position: relative;
-    margin-bottom: 15px;
-
-}
-
-.section-about__block { 
-    width: 420px;
-    height: 190px;
-    background: linear-gradient(180deg, rgba(244, 213, 178, 0.8) 0%,
-    rgba(234, 156, 65, 0.8) 100%);
-    position: absolute;
-    top: 54%;
-    left: 51%;
-    text-align: center;
-    padding-top: 15px;
-    padding-right: 0px;
-}
-
-.section-about__border{
-    width: 390px;
-    height: 160px;
-    border: 1px solid black;
-    margin: 0 auto; 
-    padding: 17px 0 0 28px;
-    text-align: left;
-}
-
-.section-about__title {
-    font-size: 36px;
-    margin: 0;
-    margin-bottom: 9px;
-}
-
-.section-about__text {
-    font-size: 12px;
-    margin: 0;
-} */
-
-
 #vacancies{
 
     margin: 10px 10px 10px 10px;
@@ -98,4 +56,48 @@ body{
 #vacancies div a{
     text-decoration: none;
     color:white;
+}
+
+.Pages{
+    display: grid;
+    width: 70%;
+    grid-template-areas: 
+    "prevBtn2 pageDisplay2 nextBtn2";
+    justify-self: center;
+    align-items: center;
+}
+
+button{
+    background-color: #0048ff;
+    color: white;
+    padding: 5px 20px;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+    font-family: 'Roboto Condensed', sans-serif;
+    margin-right: 7.5px;
+    margin-left: 7.5px;
+}
+
+.Pages div{
+    margin-right: 7.5px;
+    margin-left: 7.5px;
+    display: flex;
+    justify-content: center;
+    background-color: #0048ff;
+    color: white;
+    padding: 5px 20px;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+button:hover{
+    background-color: #0035b2;
 }
