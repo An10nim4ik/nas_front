@@ -1,24 +1,36 @@
 main div{
     margin-top: 10px;
-    border-right: 2.5px groove;
+    border-right: 2.5px;
     width: 60%;
-    border-left: 2.5px groove;
-    border-color: rgb(50, 50, 50);
+    border-left: 2.5px;
+    border-color: #0D1B2A;
     color: black;
     height:fit-content;
     text-align: center;
     justify-self: center;
     margin-bottom: 10px;
     border-radius: 10px;
-    background-color: rgb(50,50,50);
+    background-color: #0D1B2A;
     padding: 10px 10px 10px 10px;
+}
+
+.welcome h1{
+    font-size: 50px;
+}
+
+.welcome h2{
+    font-size: 40px;
+}
+
+.welcome p{
+    font-size: 20px;
 }
 
 .cta-button {
     background-color: #0048ff;
     color: white;
     padding: 15px 30px;
-    font-size: 18px;
+    font-size: 20px;
     border: none;
     border-radius: 10px;
     cursor: pointer;

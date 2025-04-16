@@ -31,35 +31,66 @@
     </header>
 
     <main>
+        <aside id="filters">
+            <input type="search" id="search" name="search" placeholder="Search">
 
-        <section class="section-about">
-            <div class="section-about__block">
-                <div class="section-about__border">
-                    <h1 class="section-about__title">Special Order</h1>
-                    <img class="section-about_icon" src="/icons/search-interface-symbol.svg" alt="search icon">
-                    <input class="section-about__search" type="text" placeholder="Search..">
-                </div>
+            <div class="check">
+                <input type="checkbox" id="checkboxsal" name="checkboxsal">
+                <label for="checkboxsal">только с зарплатой</label>
             </div>
-        </section>
 
+            <div class="filter-group">
+                <label for="sortField">Sort by:</label>
+                <select id="sortField">
+                <option value="publication_time" selected>Publication Time</option>
+                <option value="salary_asc">Salary Ascending</option>
+                <option value="salary_desc">Salary Descending</option>
+                <option value="relevance">Relevance</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label for="sortOrder">Order:</label>
+                <select id="sortOrder">
+                <option value="desc" selected>Descending</option>
+                <option value="asc">Ascending</option>
+                </select>
+            </div>
+        </aside>
 
         <div>
-            <h1>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem rem perferendis optio fuga, dignissimos itaque nemo. Esse nemo voluptate dignissimos nihil deleniti quae molestiae alias voluptatum sequi debitis architecto cumque, saepe dolor corrupti adipisci cum necessitatibus autem natus animi officia quasi harum deserunt. Reprehenderit necessitatibus, nam magni natus consequuntur quibusdam adipisci sapiente. Molestiae dolores eaque deserunt sequi neque illum eos excepturi quasi veniam, corrupti placeat expedita voluptates cumque vel accusamus at aliquam nulla facere. Praesentium consectetur voluptate nihil quidem voluptatem fugiat culpa repudiandae, alias quos veniam aut esse adipisci. Cum quibusdam, modi assumenda magnam officia omnis ducimus nisi molestiae.
-            </h1>
-        </div>
-        <div>
-            <h4>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio aut laborum eveniet dicta officiis officia nihil voluptatum rem obcaecati dolorum deleniti iste nobis magni autem, nemo, corporis reprehenderit. Eaque libero harum ea officiis minima! Obcaecati tempore, modi provident, iste optio officiis dolor quidem magnam ex aliquid quo esse, odio nemo impedit error ullam minima recusandae. Magnam vero amet placeat, dolores consequuntur consequatur, ipsum sed id architecto illo odio iste ad qui laudantium perferendis. Ea tempore incidunt, odit, omnis dolores laborum pariatur dolorum, dolore quaerat recusandae nam cupiditate deleniti soluta fugiat. Velit animi blanditiis, natus architecto ut cupiditate explicabo illum ipsum odio ex vero vitae officia, minus aut nostrum, necessitatibus culpa labore quibusdam quidem ipsa veniam id tempora tempore asperiores! Harum veniam aliquam, nesciunt explicabo perferendis itaque! Dolorem maiores distinctio enim excepturi vel laboriosam sed, reprehenderit tempora quas iure nihil et, placeat animi earum accusamus dolores a, eveniet consequuntur aliquam ipsum soluta iusto voluptas blanditiis temporibus! Voluptas fuga non minima eius eligendi ratione, amet officia accusamus delectus voluptatum atque quod nihil! Magnam porro aliquam soluta! Nesciunt, aperiam nam, dolorem iure expedita, libero distinctio adipisci corrupti rerum voluptatibus blanditiis. Odio aperiam voluptates quis, necessitatibus deleniti nulla? Deleniti animi harum consectetur beatae at.
-            </h4>
-        </div>
-        <div>
-            <h2>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, aliquam esse. Nostrum doloremque beatae eaque, exercitationem aliquam officia odio adipisci quos earum. Ipsa, assumenda. Iusto, nihil inventore! Ipsa mollitia tempore sint velit cum rem molestiae repudiandae quae quod, nemo quibusdam commodi. Sit id debitis ullam quod. Maiores enim corrupti recusandae.
-            </h2>
-        </div>
+            <section class="Pages">
+                <button id="prevBtn1">
+                    Previous
+                </button>
+                <div>
+                    <p id="pageDisplay1">
+                        Page 1
+                    </p>
+                </div>
+                <button id="nextBtn1">
+                    Next Page
+                </button>
+            </section>
+            <div id="vacancies">
 
+            </div>
+            <section class="Pages">
+                <button id="prevBtn2">
+                    Previous
+                </button>
+                <div>
+                    <p id="pageDisplay2">
+                        Page 1
+                    </p>
+                </div>
+                <button id="nextBtn2">
+                    Next Page
+                </button>
+            </section>
+        </div>
     </main>
+    
 
     <footer>
         <div class="info">
@@ -79,12 +110,13 @@
             </h3>
         </div>
         <div class="copyright">
-            <h3>Copyright (c) 2025</h3>
+            <h3 id="year"></h3>
         </div>
     </footer>
 
     <script src="scripts/index.js"></script>
-    <script src="scripts/connect.js"></script>
+    <!-- <script src="scripts/connect.js"></script> -->
+    <script src="scripts/jobs.js"> </script>
 </body>
 
 </html>
