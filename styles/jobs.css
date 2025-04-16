@@ -97,7 +97,72 @@ button{
     transition: background-color 0.3s ease;
     font-family: 'Roboto Condensed', sans-serif;
 }
+/* 
+#search{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    align-self: center;
+    width: 100%;
+    border-radius: 10px; 
+    margin: 10px 10px 10px 10px;
+    padding: 5px 5px 5px 5px;
+    font-size: 18px;
+    font-family: "Roboto Condensed", sans-serif;
+} */
+
+/* .check{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.check label{
+    font-size: 18px;
+    color: white;
+} */
 
 button:hover{
     background-color: #0035b2;
+}
+
+main{
+    display: grid;
+    grid-template-areas: "filters div";
+    grid-template-columns: 30% 70%;
+}
+
+#filters {
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.6);  /* semi-transparent background */
+    border-radius: 10px;
+    margin: 10px;
+    color: white;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+#filters input[type="search"] {
+    width: 90%;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.filter-group {
+    margin-top: 10px;
+}
+
+#filters label {
+    margin-right: 5px;
+    font-size: 16px;
+}
+
+#filters select {
+    font-size: 16px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #0048ff;
+    color: white;
+    border: none;
 }
