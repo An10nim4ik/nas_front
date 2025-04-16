@@ -29,37 +29,68 @@
             <a href="profile.html">Profile</a>
         </div>
     </header>
-    <section class="Pages">
-        <button id="prevBtn1">
-            Previous
-        </button>
-        <div>
-            <p id="pageDisplay1">
-                Page 1
-            </p>
-        </div>
-        <button id="nextBtn1">
-            Next Page
-        </button>
-    </section>
 
-    <main id="vacancies">
-        
+    <main>
+        <aside id="filters">
+            <input type="search" id="search" name="search" placeholder="Search">
+
+            <div class="check">
+                <input type="checkbox" id="checkboxsal" name="checkboxsal">
+                <label for="checkboxsal">только с зарплатой</label>
+            </div>
+
+            <div class="filter-group">
+                <label for="sortField">Sort by:</label>
+                <select id="sortField">
+                <option value="publication_time" selected>Publication Time</option>
+                <option value="salary_asc">Salary Ascending</option>
+                <option value="salary_desc">Salary Descending</option>
+                <option value="relevance">Relevance</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label for="sortOrder">Order:</label>
+                <select id="sortOrder">
+                <option value="desc" selected>Descending</option>
+                <option value="asc">Ascending</option>
+                </select>
+            </div>
+        </aside>
+
+        <div>
+            <section class="Pages">
+                <button id="prevBtn1">
+                    Previous
+                </button>
+                <div>
+                    <p id="pageDisplay1">
+                        Page 1
+                    </p>
+                </div>
+                <button id="nextBtn1">
+                    Next Page
+                </button>
+            </section>
+            <div id="vacancies">
+
+            </div>
+            <section class="Pages">
+                <button id="prevBtn2">
+                    Previous
+                </button>
+                <div>
+                    <p id="pageDisplay2">
+                        Page 1
+                    </p>
+                </div>
+                <button id="nextBtn2">
+                    Next Page
+                </button>
+            </section>
+        </div>
     </main>
-
-    <section class="Pages">
-        <button id="prevBtn2">
-            Previous
-        </button>
-        <div>
-            <p id="pageDisplay2">
-                Page 1
-            </p>
-        </div>
-        <button id="nextBtn2">
-            Next Page
-        </button>
-    </section>
+    
 
     <footer>
         <div class="info">
@@ -79,7 +110,7 @@
             </h3>
         </div>
         <div class="copyright">
-            <h3>Copyright (c) 2025</h3>
+            <h3 id="year"></h3>
         </div>
     </footer>
 

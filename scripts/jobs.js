@@ -1,9 +1,9 @@
 let curPage = 1;
 let totalPages = 1;
-
-window.addEventListener('DOMContentLoaded', function(){
-    fetchVacancies();
-});
+let curKeyword = "";
+let curSortField = "publication_time";
+let curSortOrder = "salary_desc";
+let with_salary = false;
 
 window.addEventListener('DOMContentLoaded', function(){
     fetchVacancies();
@@ -36,8 +36,13 @@ window.addEventListener('DOMContentLoaded', function(){
 function buildUrl(){
     const baseUrl = "https://api.hh.ru/vacancies";
     const params = new URLSearchParams({
+        host: "hh.kz",
         area: 40,
-        page: curPage
+        page: curPage,
+        text: curKeyword,
+        order_by: curSortField,
+        // order: curSortOrder,
+        only_with_salary: with_salary
     });
     return `${baseUrl}?${params.toString()}`;
 }
@@ -72,3 +77,31 @@ async function displayData(vacancies){
 
     });
 }
+
+document.getElementById("search").addEventListener("input" , (event) => {
+    curKeyword = event.target.value;
+    curPage = 1;
+    console.log(`Using search!\n${event.target.value}`);
+    fetchVacancies();
+});
+
+document.getElementById("sortField").addEventListener("change" , (event) => {
+    curSortField = event.target.value;
+    curPage = 1;
+    console.log(`using Sorting Field\n${event.target.value}`);
+    fetchVacancies();
+});
+
+document.getElementById("sortOrder").addEventListener("change", (event) =>{
+    curSortOrder = event.target.value;
+    curPage = 1;
+    console.log(`using Sort Order\n${event.target.value}`);
+    fetchVacancies();
+});
+
+document.getElementById("checkboxsal").addEventListener("change", (event)=>{
+    with_salary = event.target.checked;
+    curPage = 1;
+    console.log(`using With Salary Only\n${event.target.checked}`);
+    fetchVacancies();
+});
