@@ -28,37 +28,6 @@ main {
     height: 300px;
     margin: 20px 100px 0px 0px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
-    margin: 7.5px 7.5px 7.5px 7.5px;
-    display: grid;
-    grid-template-areas: 
-    "h3"
-    "p"
-    "a"
-    ;
-    width: 70%;
-    justify-self: center;
-    height: 200px;
-    background-color: #0D1B2A;
-    color:white;
-    padding: 10px 10px 10px 10px;
-}
-
-#vacancies div div{
-    background-color: #0048ff;
-    height: 50px;
-    width: 100%;
-    color: white;
-    padding: 15px 30px;
-    font-size: 18px;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    margin-top: 20px;
-    transition: background-color 0.3s ease;
-    font-family: 'Roboto Condensed', sans-serif;
-    align-items: center;
-    justify-content: center;
-}
 
 }
 
@@ -152,7 +121,7 @@ main {
 }
 
 .link:hover {
-    background-color: #6C757D;
+    background-color: #2d7fc7;
 }
 
 /* Pagination section */
@@ -172,7 +141,7 @@ button {
     color: #FFFFFF;
     font-weight: bold;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: 0.3s ease;
 }
 
 button:hover {
