@@ -80,7 +80,7 @@ async function displayData(vacancies){
                 <p>Salary to: ${vacancy.salary.to ? vacancy.salary.to : "N/A"}
                 <p>Currecy ${vacancy.salary.currency}`;
         }else{
-            container.innerHTML += `Not specified`;
+            vacancyDiv.innerHTML += `<p>Not specified</p>`;
         }
         vacancyDiv.innerHTML += `<a href="vacancy.html?id=${vacancy.id}" target="_blank"><div class="link"><p>More information</p></div></a>`;
         container.appendChild(vacancyDiv);

@@ -40,7 +40,7 @@ function renderVacancyDetail(vacancy){
         }
         container.innerHTML += `<p>Currecy ${vacancy.salary.currency}`;
     }else{
-        container.innerHTML += `Not specified`;
+        container.innerHTML += `<p>Not specified</p>`;
     }
     if(vacancy.snippet){
         container.innerHTML += `
