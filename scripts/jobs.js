@@ -63,18 +63,27 @@ async function fetchVacancies(){
         console.error("Error fetching vacancies:" , error);
     }
 }   
+const container = document.getElementById("vacancies");
 
 async function displayData(vacancies){
-    const container = document.getElementById("vacancies");
     container.innerHTML = '';
 
     vacancies.forEach(vacancy => {
         const vacancyDiv = document.createElement('div');
         vacancyDiv.innerHTML = `<h3>${vacancy.name}</h3>
-            <p>Employer: ${vacancy.employer ? vacancy.employer.name : "N/A"}</p>
-            <a href="${vacancy.alternate_url}" target="_blank"><div class="link"><p>More information</p></div></a>`;
+        <p>Employer: ${vacancy.employer ? vacancy.employer.name : "N/A"}
+        <p>Salary:</p>
+        `;
+        if(vacancy.salary){
+            vacancyDiv.innerHTML +=`
+                <p>Salary from: ${vacancy.salary.from ? vacancy.salary.from : "N/A"}
+                <p>Salary to: ${vacancy.salary.to ? vacancy.salary.to : "N/A"}
+                <p>Currecy ${vacancy.salary.currency}`;
+        }else{
+            container.innerHTML += `Not specified`;
+        }
+        vacancyDiv.innerHTML += `<a href="vacancy.html?id=${vacancy.id}" target="_blank"><div class="link"><p>More information</p></div></a>`;
         container.appendChild(vacancyDiv);
-
     });
 }
 

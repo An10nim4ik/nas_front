@@ -1,0 +1,32 @@
+#vacancy-detail {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    font-family: 'Roboto Condensed', sans-serif;
+    line-height: 1.6;
+    color: #212529;
+  }
+  
+  #vacancy-detail h1 {
+    margin-bottom: 10px;
+  }
+  #vacancy-detail h3 {
+    margin-top: 20px;
+    margin-bottom: 5px;
+  }
+  #vacancy-detail a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 16px;
+    background: #0048ff;
+    color: white;
+    border-radius: 4px;
+    text-decoration: none;
+  }
+  #vacancy-detail a:hover {
+    background: #0035b2;
+  }
+  
