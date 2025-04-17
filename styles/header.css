@@ -1,11 +1,11 @@
-body{
+body {
     margin: 0px 0px 0px 0px;
 }
 
-header{
+header {
     display: grid;
-    grid-template-areas: 
-    "logo nav profile";
+    grid-template-areas:
+        "logo nav profile";
     grid-template-columns: 15% 70% 15%;
     background-color: #0D1B2A;
     width: 100%;
@@ -14,31 +14,32 @@ header{
     top: 0;
 }
 
-.logo{
+.logo {
     margin-left: 15px;
     display: flex;
     justify-content: left;
     align-items: center;
 }
 
-.logo a{
+.logo a {
     font-size: 30px;
-    font-family:  "Lobster", sans-serif;
+    font-family: "Lobster", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
 }
 
-header a{
+header a {
     color: white;
     text-decoration: none;
 }
 
-header a:hover{
+header a:hover {
     color: rgb(255, 255, 81);
 }
 
-nav{
+nav {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -47,7 +48,7 @@ nav{
     padding-right: 15px;
 }
 
-nav a{
+nav a {
     font-size: 25px;
 }
 
@@ -58,6 +59,6 @@ nav a{
     align-items: center;
 }
 
-.profile a{
+.profile a {
     font-size: 30px;
 }
