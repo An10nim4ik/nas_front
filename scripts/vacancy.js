@@ -50,6 +50,6 @@ function renderVacancyDetail(vacancy){
     }
     container.innerHTML += `
         <div> ${vacancy.description || '-'} </div>
-        <a href="vacancy.html?id${vacancy.id}" target="_blank"><div class="link"><p>Look at this vacancy on hh.kz</p></div></a>
+        <a href="${vacancy.alternate_url}" target="_blank"><div class="link"><p>Look at this vacancy on hh.kz</p></div></a>
     `;
 }
