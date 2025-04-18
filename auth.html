@@ -1,56 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" 
-    href="https://fonts.googleapis.com">
-    <link rel="preconnect" 
-    href="https://fonts.gstatic.com" 
-    crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-    href="https://fonts.googleapis.com/css2?family=Anton&family=Lobster&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" 
-    rel="stylesheet">
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Lobster&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/auth.css">
     <title>Welcome Back!</title>
 </head>
+
 <body>
+    <header>
+   
+    </header>
     <main>
         <div class="auth-box">
             <h1 id="nas">NAS</h1>
+            <div class="social-buttons">
+                <button class="social-btn google" onclick="authWithGoogle()">
+                    <img src="icons/google_logo.svg" alt="Google" />
+                </button>
+                <button class="social-btn facebook" onclick="authWithFacebook()">
+                    <img src="icons/facebook_logo.svg" alt="Facebook" />
+                </button>
+                <button class="social-btn microsoft" onclick="authWithMicrosoft()">
+                    <img src="icons/office_logo.svg" alt="Microsoft" />
+                </button>
+                <button class="social-btn apple" onclick="authWithApple()">
+                    <img src="icons/apple_logo.svg" alt="Apple" />
+                </button>
+                <button class="social-btn vk" onclick="authWithVK()">
+                    <img src="icons/vk_logo.svg" alt="VK" />
+                </button>
+                <button class="social-btn vk" onclick="authWithTwitter()">
+                    <img src="icons/twitter_logo.svg" alt="Twitter" />
+                </button>
+            </div>
+
             <div class="auth-box_box">
                 <div id="regbtn" class="auth-box_box-lg">
                     <button id="reg">
                         Sing up
                     </button>
-                </div> 
+                </div>
                 <div id="loginbtn" class="auth-box_box-rg">
                     <button id="login">
                         Sign in
                     </button>
                 </div>
-            </div>    
-            <div id = "sign_up">
+            </div>
+            <div id="sign_up">
                 <label for="fname">First name:<br></label>
-                <input class="input_field" type="text"  placeholder="example: John" id="fname" name="fname" required>
+                <input class="input_field" type="text" placeholder="example: John" id="fname" name="fname" required>
                 <label for="lname">Last name:</label>
                 <input class="input_field" type="text" placeholder="example: Doe" id="lname" name="lname">
                 <label for="email">Email:</label>
                 <input class="input_field" type="email" placeholder="example@mail.com" id="email" name="email" required>
+
                 <label for="psw">Password:</label>
                 <input class="input_field" type="password" id="psw" name="psw" required>
+                <input type="checkbox" onclick="togglePassword('psw')"> Show Password
+
                 <label for="pswrpt">Repeat Password:</label>
                 <input class="input_field" type="password" id="pswrpt" name="pswrpt" required>
+                <input type="checkbox" onclick="togglePassword('pswrpt')"> Show Password
+
                 <div class="auth-box_btn">
                     <button onclick="validate()">Submit</button>
                 </div>
             </div>
-            <div id = "sign_in">
+            <div id="sign_in">
                 <label for="email_sign_in">Email:<br></label>
-                <input class="input_field" type="email" placeholder="example@check.com" id="email_sign_in" name="email_sign_in" required>
+                <input class="input_field" type="email" placeholder="example@check.com" id="email_sign_in"
+                    name="email_sign_in" required>
+
                 <label for="psw_sign_in">Password:<br></label>
                 <input class="input_field" type="password" id="psw_sign_in" name="psw_sign_in" required>
+                <input type="checkbox" onclick="togglePassword('psw_sign_in')"> Show Password
+                <a href="/forgot-password" class="forgot-password">Forgot password?</a>
+
                 <div class="auth-box_btn">
                     <button onclick="validate()">Sign in</button>
                 </div>
@@ -58,5 +91,7 @@
         </div>
     </main>
     <script src="scripts/connect.js"></script>
+    <script src="scripts/auth.js"></script>
 </body>
+
 </html>
