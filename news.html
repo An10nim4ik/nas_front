@@ -291,16 +291,41 @@
         </section>
     </main>
 
-        <section class="container">
+        <!-- <section class="container">
             <div class="slideshow">
                 
             </div>
-        </section>
+        </section> -->
 
-    <div id="news">
 
+    <div id="articleModal" class="modal" aria-hidden="true">
+        <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+            <button id="modalClose" class="modal-close" aria-label="Close">&times;</button>
+            <h2 id="modalTitle"></h2>
+            <p class="modal-author"></p>
+            <img class="modal-image" src="" alt="Article image">
+            <p class="modal-desc"></p>
+            <a href="#" class="modal-readmore" target="_blank">Read full Article</a>
+        </div>
     </div>
 
+
+    <div class="display">
+        <section class="container">
+            <section class="filters">
+                <input type="search" id="search" name="search" placeholder="Search">
+                <div id="history">
+                    
+                </div>
+            </section>
+            <section class="size">
+                <div id="news">
+    
+                </div>
+            </section>
+        </section>
+    </div>
+    
     <footer>
 
         <div class="info">
