@@ -88,7 +88,7 @@ async function displayData(articles){
   articles.forEach(article => {
     const newsDiv = document.createElement("div");
     newsDiv.innerHTML = `<h1>${article.title}</h1>
-      <p>${article.description}</p>
+      <h5>${article.description}</h5>
       <div class="link"><p>More information</p></div>
     `;
 
