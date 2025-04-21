@@ -22,136 +22,6 @@ body {
     }
 }
 
-.section-about {
-    height: 530px;
-    background: url(../imgs/Industrial_Control_Room.jpeg) center/cover no-repeat;
-    position: relative;
-    margin-bottom: 20px;
-    z-index: -1;
-}
-
-.section-about__block {
-    width: 420px;
-    height: 190px;
-    position: absolute;
-    top: 54%;
-    left: 51%;
-    text-align: center;
-    padding-top: 15px;
-    padding-right: 0px;
-}
-
-.section-about__title {
-    font-size: 36px;
-    margin: 0;
-    margin-bottom: 9px;
-}
-
-.section-about__text {
-    font-size: 12px;
-    margin: 0;
-}
-
-.section-anchor {
-    display: flex;
-    gap: 2rem;
-    font-family: Arial, sans-serif;
-    margin: 0px 340px 0px 340px;
-}
-
-.section-anchor__links {
-    position: sticky;
-    top: 120px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    width: 32px;
-    height: 300px;
-    background-color: #DEE2E6;
-    border: none;
-    margin: 0;
-}
-
-.section-anchor__links a {
-    width: 32px;
-    height: 32px;
-    color: #3e61f1;
-    border: 2px solid #3e61f1;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-.section-anchor__links a:hover,
-.section-anchor__links a.active {
-    background-color: #3e61f1;
-    color: #DEE2E6;
-    border: 2px solid #3e61f1;
-}
-
-.section-anchor__Container {
-    padding: 0px 0px 0px 0px;
-    border: 0px;
-    background-color: #F8F9FA;
-    margin-top: 0px;
-    width: 1232px;
-}
-
-.section-anchor__Block {
-    background-color: #F8F9FA;
-    padding: 22px 33px 22px 33px;
-    margin: 0;
-    border: 0;
-    font-family: 'Segoe UI', sans-serif;
-    color: #333;
-    width: 1200px;
-}
-
-.section-anchor__Block_Title {
-    font-size: 22px;
-    font-weight: bold;
-    margin-bottom: 20px;
-    color: #3e61f1;
-    border: 0;
-    padding: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-
-
-.section-anchor__Block_Body {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.section-anchor__BlockFirstPeace {
-    background-color: #F8F9FA;
-    border-radius: 10px;
-}
-
-.section-anchor__BlockFirstPeace_Title {
-    font-size: 20px;
-    font-weight: 600;
-    color: #212529;
-    border-bottom: 2px solid black;
-    width: 40px;
-}
-
-.section-anchor__BlockFirstPeace_Body {
-    font-size: 15px;
-    line-height: 1.6;
-    color: #495057;
-}
-
 .container {
     box-sizing: border-box;
     display: block;
@@ -160,8 +30,6 @@ body {
     margin: 0px 340px 0px 340px;
     width: 1200px;
 }
-
-
 
 button:hover {
     background-color: #495057;
@@ -346,7 +214,20 @@ a:hover .link {
     margin: 0px 340px 0px 340px;
     width: 1200px;
     display: flex;
+}
 
+.Pages {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+#pageDisplay1,
+#pageDisplay2 {
+    font-weight: bold;
+    color: #212529;
 }
 
 .filters {
@@ -359,7 +240,7 @@ a:hover .link {
     flex-direction: column;
     gap: 15px;
     margin: 0;
-    height: 300px;
+    height: max-content;
     margin: 20px 60px 0px 0px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
 }
