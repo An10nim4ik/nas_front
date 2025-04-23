@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Lobster&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Lobster&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/footer.css">
     <link rel="stylesheet" href="styles/profile.css">
     <title>Your profile</title>
 </head>
-<body>
+
     <header>
         <div class="logo">
             <h1 id="nas">
@@ -32,62 +35,180 @@
         </div>
     </header>
 
-    <div id="main_content">
-        <aside>
-            <div id="info_short">
-                <img src="icons/profile-circle2.svg" alt="pfp">
-                <p>
-                    <br>Name:<br>
-                </p>
-                <p>
-                    Nurasyl
-                </p>
-            </div>
-            <div id="sections">
-                <h1>
-                    General Information
-                </h1>
-                <h1>
-                    Security
-                </h1>
-                <h1>
-                    Education
-                </h1>
-            </div>
-        </aside>
+    <body>
+        <div class="settings-container">
+            <aside class="sidebar">
+                <h2>Settings</h2>
+                <ul>
+                    <li class="active" data-tab="account"><span>👤</span> Account Preferences</li>
+                    <li data-tab="security"><span>🔒</span> Sign In & Security</li>
+                    <li data-tab="visibility"><span>👁️</span> Visibility</li>
+                    <li data-tab="privacy"><span>🛡️</span> Data Privacy</li>
+                    <li data-tab="notifications"><span>🔔</span> Notifications</li>
+                </ul>
+            </aside>
+            <main class="section-content">
+                <ul class="section-content_ul tab-content" id="account">
+                    <li class="section-content__li">
+                        <div class="section-content__div">
+                            <div class="upload-area">
+                                <img id="profilePreview" src="icons/profile-circle.svg"
+                                    class="section-content__profile-pic" alt="Profile" />
+                                <label class="upload-btn" for="photoUpload">Upload Photo</label>
+                                <input type="file" id="photoUpload" accept="image/*" />
+                            </div>
+                            <div>
+                                <h1 class="style_for_h1">Profile Information</h1>
+                            </div>
+                            <ul class="section-content_ul_ul">
+                                <li>
+                                    <a href="#">
+                                        <section class="section-heading">
+                                            <div>
+                                                <p>Name, location, and industry</p>
+                                            </div>
+                                            <div class="section-content_ul_ul_arrow">
+                                                <li-icon aria-hidden="true" type="arrow-right-icon" size="small">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                                                        data-supported-dps="16x16" fill="currentColor" width="16"
+                                                        height="16" focusable="false">
+                                                        <path
+                                                            d="M9.41 14l-1.29-1.29L11.83 9H2V7h9.83L8.12 3.29 9.41 2l5.29 5.29a1 1 0 010 1.41z">
+                                                        </path>
+                                                    </svg>
+                                                </li-icon>
+                                            </div>
+                                        </section>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <section class="section-heading">
+                                            <div>
+                                                <p>Personal demographic information</p>
+                                            </div>
+                                            <div class="section-content_ul_ul_arrow">
+                                                <li-icon aria-hidden="true" type="arrow-right-icon" size="small">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                                                        data-supported-dps="16x16" fill="currentColor" width="16"
+                                                        height="16" focusable="false">
+                                                        <path
+                                                            d="M9.41 14l-1.29-1.29L11.83 9H2V7h9.83L8.12 3.29 9.41 2l5.29 5.29a1 1 0 010 1.41z">
+                                                        </path>
+                                                    </svg>
+                                                </li-icon>
+                                            </div>
+                                        </section>
+                                    </a>
 
-        <main>
-            <div>
-                <h1>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi sed tempora at obcaecati excepturi deserunt assumenda distinctio corrupti quis rem quaerat culpa doloremque animi officiis porro omnis repellat neque nemo, incidunt ipsum aliquam error quas? Nihil eius autem corrupti rem perferendis, nulla voluptatibus ipsa omnis ad laborum? Architecto eaque molestiae maxime! Vitae, tenetur laudantium nihil asperiores obcaecati ullam maxime optio ipsum sequi consequatur, voluptatibus ut nisi blanditiis rerum repellendus minima molestias quas, qui cupiditate possimus odit deleniti? Deserunt sequi est dolores maxime nobis, beatae nihil debitis sit perspiciatis sed quis adipisci dolorem ex vitae ratione aperiam suscipit cum incidunt accusamus veritatis neque earum. Consequuntur nam, adipisci voluptas voluptate est incidunt deserunt natus asperiores atque. Et voluptatibus deleniti sunt excepturi, vel vero consectetur, veniam, rem aperiam eos blanditiis assumenda ea. Tenetur cupiditate aperiam ea possimus voluptatum, cumque natus, consequatur molestiae ab deleniti eius neque odio, provident voluptas exercitationem a sunt pariatur?
-                </h1>
-            </div>
-        </main>
-    </div>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <section class="section-heading">
+                                            <div>
+                                                <p>Verifications</p>
+                                            </div>
+                                            <div class="section-content_ul_ul_arrow">
+                                                <li-icon aria-hidden="true" type="arrow-right-icon" size="small">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                                                        data-supported-dps="16x16" fill="currentColor" width="16"
+                                                        height="16" focusable="false">
+                                                        <path
+                                                            d="M9.41 14l-1.29-1.29L11.83 9H2V7h9.83L8.12 3.29 9.41 2l5.29 5.29a1 1 0 010 1.41z">
+                                                        </path>
+                                                    </svg>
+                                                </li-icon>
+                                            </div>
+                                        </section>
+                                    </a>
+                                </li>
+                            </ul>
 
-    <footer>
-        <div class="info">
-            <h3>
-                Contacts
-            </h3>
-            <h4>
-                Main Developer: Nurasyl Kydyrkozha
-            </h4>
-            <h4>
-                email: nyrdatychto@gmail.com
-            </h4>
+                        </div>
+                    </li>
+                    <li class="section-content__li">
+                        <div class="section-content__div">
+                            <div>
+                                <h1 class="style_for_h1">Display</h1>
+                            </div>
+
+                            <ul class="section-content_ul_ul">
+                                <li>
+                                    <a href="#">
+                                        <section class="style_for_p">
+                                            <div>
+                                                <p>Dark mode</p>
+                                            </div>
+                                            <div class="section-content_ul_ul_arrow">
+                                                <li-icon aria-hidden="true" type="arrow-right-icon" size="small">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                                                        data-supported-dps="16x16" fill="currentColor" width="16"
+                                                        height="16" focusable="false">
+                                                        <path
+                                                            d="M9.41 14l-1.29-1.29L11.83 9H2V7h9.83L8.12 3.29 9.41 2l5.29 5.29a1 1 0 010 1.41z">
+                                                        </path>
+                                                    </svg>
+                                                </li-icon>
+                                            </div>
+                                        </section>
+                                    </a>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </li>
+                </ul>
+
+                <div class="tab-content hidden" id="security">
+                    <h3>Sign In Security</h3>
+                    <div class="card">Password</div>
+                    <div class="card">Two-factor authentication</div>
+                </div>
+
+                <div class="tab-content hidden" id="visibility">
+                    <h3>Visibility</h3>
+                    <div class="card">Profile visibility</div>
+                    <div class="card">Activity status</div>
+                </div>
+                <div class="tab-content hidden" id="privacy">
+                    <h3>Data Privacy</h3>
+                    <div class="card">Download your data</div>
+                    <div class="card">Clear search history</div>
+                </div>
+                <div class="tab-content hidden" id="notifications">
+                    <h3>Notifications</h3>
+                    <div class="card">Email notifications</div>
+                    <div class="card">Push notifications</div>
+                </div>
+            </main>
+
         </div>
-        <div class="rights">
-            <h3>
-                All rights are reserved
-            </h3>
-        </div>
-        <div class="copyright">
-            <h3 id="year"></h3>
-        </div>
-    </footer>
-    
-    <script src="scripts/index.js"></script>
-    <script src="scripts/connect.js"></script>
-</body>
+
+        <footer>
+            <div class="info">
+                <h3>
+                    Contacts
+                </h3>
+                <h4>
+                    Main Developer: Nurasyl Kydyrkozha
+                </h4>
+                <h4>
+                    email: nyrdatychto@gmail.com
+                </h4>
+            </div>
+            <div class="rights">
+                <h3>
+                    All rights are reserved
+                </h3>
+            </div>
+            <div class="copyright">
+                <h3 id="year"></h3>
+            </div>
+        </footer>
+
+        <script src="scripts/profile.js"></script>
+        <script src="scripts/index.js"></script>
+        <script src="scripts/connect.js"></script>
+    </body>
+
 </html>
