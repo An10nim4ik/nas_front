@@ -10,25 +10,25 @@ window.addEventListener("DOMContentLoaded", function(){
   this.document.getElementById('prevBtn1').addEventListener('click', () =>{
     if(curPage > 1){
         curPage--;
-        fetchVacancies();
+        fetchNews();
     } 
   });
   this.document.getElementById('prevBtn2').addEventListener('click', () =>{
-      if(curPage > 1){
+    if(curPage > 1){
           curPage--;
-          fetchVacancies();
+          fetchNews();
       }
   });
   this.document.getElementById('nextBtn1').addEventListener('click', () =>{
       if(curPage < totalPages){
           curPage++;
-          fetchVacancies();
+          fetchNews();
       }
   });
   this.document.getElementById('nextBtn2').addEventListener('click', () =>{
       if(curPage < totalPages){
           curPage++;
-          fetchVacancies();
+          fetchNews();
       }
   });
 });
@@ -72,7 +72,7 @@ function buildUrl(){
   let baseUrl = "https://newsapi.org/v2/everything";
   let API_KEY = apikey;
   const query = curQuery;
-  const url = `${baseUrl}?q=${query}&apiKey=${API_KEY}`; 
+  const url = `${baseUrl}?q=${query}&searchin=title&page=${curPage}&pageSize=10&apiKey=${API_KEY}`; 
   return url;
 }
 
@@ -86,7 +86,8 @@ async function fetchNews(){
     let data = await response.json();
     document.getElementById('pageDisplay1').textContent = `Page ${curPage}`;
     document.getElementById('pageDisplay2').textContent = `Page ${curPage}`;
-    totalPages = 1 || data.pages;
+    totalPages = data.totalResults;
+    totalPages = parseInt((totalPages + 9) / 10 ? (totalPages + 9) / 10 : 1);
     displayData(data.articles);
   }catch (error){
     console.error("Error fetching news org: ", error);
@@ -96,7 +97,6 @@ async function fetchNews(){
 async function displayData(articles){
   const container = document.getElementById("news");
   container.innerHTML = '';
-  console.log(articles.length);
   articles.forEach(article => {
     const newsDiv = document.createElement("div");
     newsDiv.innerHTML = `<h1>${article.title}</h1>
