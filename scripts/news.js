@@ -72,7 +72,7 @@ function buildUrl(){
   let baseUrl = "https://newsapi.org/v2/everything";
   let API_KEY = apikey;
   const query = curQuery;
-  const url = `${baseUrl}?q=${query}&searchin=title&page=${curPage}&pageSize=10&apiKey=${API_KEY}`; 
+  const url = `${baseUrl}?q=${query}&searchin=title&page=${curPage}&sortBy=popularity&pageSize=10&apiKey=${API_KEY}`; 
   return url;
 }
 

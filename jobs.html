@@ -38,11 +38,35 @@
             <div id="filters">
                 <input type="search" id="search" name="search" placeholder="Search">
 
+                <input type="search" id="minSal" name="search" placeholder="Min Salary">
+
                 <div class="check">
                     <input type="checkbox" id="checkboxsal" name="checkboxsal">
                     <label for="checkboxsal">только с зарплатой</label>
                 </div>
 
+                <div class="filter-group">
+                    <label for="currency"></label>
+                    <select name="currency" id="currency"> 
+                        <option value="KZT" Selected>KZ Tenge</option>
+                        <option value="USD">US Dollars</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="industries">Industries:</label>
+                    <select id="industries" name="industries">
+                        <option value="" selected>Choose</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="prof_field">Professional Field:</label>
+                    <select id="prof_field" name="prof_field">
+                        <option value="" selected>Choose</option>
+                    </select>
+                </div>
+                
                 <div class="filter-group">
                     <label for="sortField">Sort by:</label>
                     <select id="sortField">
@@ -54,12 +78,39 @@
                 </div>
 
                 <div class="filter-group">
-                    <label for="sortOrder">Order:</label>
-                    <select id="sortOrder">
-                        <option value="desc" selected>Descending</option>
-                        <option value="asc">Ascending</option>
+                    <label for="schedule">Sort by Schedule</label>
+                    <select name="schedule" id="schedule">
+                        <option value="">Choose</option>
+                        <option value="fullDay">Full day schedule</option>
+                        <option value="shift">Shifts schedule</option>
+                        <option value="flexible">Flexible schedule</option>
+                        <option value="flyInFlyOut">Fly in and Fly out schedule</option>
                     </select>
                 </div>
+
+                <div class="filter-group">
+                    <label for="experience">Sort by Experience</label>
+                    <select name="experience" id="experience">
+                        <option value="">Choose</option>
+                        <option value="noExperience">No experience</option>
+                        <option value="between1And3">From 1 to 3 years</option>
+                        <option value="between3And6">From 3 to 6 years</option>
+                        <option value="moreThan6">More than 6 years</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="employment">Sort by Employment Type</label>
+                    <select name="employment" id="employment">
+                        <option value="">Choose</option>
+                        <option value="full">Full time</option>
+                        <option value="part">Part time</option>
+                        <option value="project">Project</option>
+                        <option value="volunteer">Volunteer</option>
+                        <option value="probation">Probation</option>
+                    </select>
+                </div>
+
             </div>
             <section class="size">
                 <div class="Pages">
