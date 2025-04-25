@@ -11,6 +11,9 @@
         rel="stylesheet">
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/auth.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
     <title>Welcome Back!</title>
 </head>
 
@@ -55,24 +58,26 @@
                 </div>
             </div>
             <div id="sign_up">
-                <label for="fname">First name:<br></label>
-                <input class="input_field" type="text" placeholder="example: John" id="fname" name="fname" required>
-                <label for="lname">Last name:</label>
-                <input class="input_field" type="text" placeholder="example: Doe" id="lname" name="lname">
-                <label for="email">Email:</label>
-                <input class="input_field" type="email" placeholder="example@mail.com" id="email" name="email" required>
+                <form action="" method="">
+                    <label for="fname">First name:<br></label>
+                    <input class="input_field" type="text" placeholder="example: John" id="fname" name="fname" required>
+                    <label for="lname">Last name:</label>
+                    <input class="input_field" type="text" placeholder="example: Doe" id="lname" name="lname">
+                    <label for="email">Email:</label>
+                    <input class="input_field" type="email" placeholder="example@mail.com" id="email" name="email" required>
 
-                <label for="psw">Password:</label>
-                <input class="input_field" type="password" id="psw" name="psw" required>
-                <input type="checkbox" onclick="togglePassword('psw')"> Show Password
+                    <label for="psw">Password:</label>
+                    <input class="input_field" type="password" id="psw" name="psw" required>
+                    <input type="checkbox" onclick="togglePassword('psw')"> Show Password
 
-                <label for="pswrpt">Repeat Password:</label>
-                <input class="input_field" type="password" id="pswrpt" name="pswrpt" required>
-                <input type="checkbox" onclick="togglePassword('pswrpt')"> Show Password
+                    <label for="pswrpt">Repeat Password:</label>
+                    <input class="input_field" type="password" id="pswrpt" name="pswrpt" required>
+                    <input type="checkbox" onclick="togglePassword('pswrpt')"> Show Password
 
-                <div class="auth-box_btn">
-                    <button onclick="validate()">Submit</button>
-                </div>
+                    <div class="auth-box_btn">
+                        <button onclick="validate()">Submit</button>
+                    </div>
+                </form>
             </div>
             <div id="sign_in">
                 <label for="email_sign_in">Email:<br></label>
