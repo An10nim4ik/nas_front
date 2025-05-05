@@ -1,22 +1,124 @@
-body{
-    background-image: url(../imgs/3407044.jpg);
-}
-main section{
-    margin-top: 10px;
-    border-right: 2.5px;
-    width: 60%;
-    border-left: 2.5px;
-    border-color: #0D1B2A;
-    color: black;
-    height:fit-content;
-    text-align: center;
-    justify-self: center;
-    margin-bottom: 10px;
-    border-radius: 10px;
-    background-color: #0D1B2A;
-    padding: 10px 10px 10px 10px;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Condensed', Arial, sans-serif;
 }
 
-main section h1,h2,h3,h4,h5,h6,p{
+body {
+    background-color: #F8F9FA;
+    color: #212529;
+}
+
+main {
+    padding: 40px 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+section {
+    background-color: #FFFFFF;
+    padding: 24px 32px;
+    border-radius: 10px;
+    border: 1px solid #DEE2E6;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+}
+
+section h1 {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.6;
+    color: #343A40;
+}
+
+.vacancies-list {
+    margin-top: 20px;
+}
+
+.vacancy {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #DEE2E6;
+}
+
+.vacancy-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #343A40;
+}
+
+.vacancy-status {
+    padding: 5px 10px;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 5px;
     color: white;
+}
+
+.vacancy-status.accepted {
+    background-color: #28a745; /* Green */
+}
+
+.vacancy-status.rejected {
+    background-color: #dc3545; /* Red */
+}
+
+.vacancy-status.under-consideration {
+    background-color: #fd7e14; /* Orange */
+}
+
+.vacancy-status.unseen {
+    background-color: #6c757d; /* Gray */
+}
+
+@media only screen and (max-width: 768px) {
+    main {
+        padding: 20px;
+    }
+
+    section {
+        padding: 16px 20px;
+    }
+
+    section h1 {
+        font-size: 16px;
+    }
+
+    .vacancy-title {
+        font-size: 14px;
+    }
+
+    .vacancy-status {
+        font-size: 12px;
+    }
+}
+/* Hover effect for vacancy items */
+.vacancy {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.vacancy:hover {
+    transform: scale(1.03); /* Slightly scale up on hover */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+/* Tooltip styling */
+.vacancy-status {
+    position: relative;
+    cursor: pointer;
+}
+
+
+
+.vacancy-status:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Transition effect for changing status */
+.vacancy-status {
+    transition: background-color 0.3s ease;
 }

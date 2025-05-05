@@ -5,39 +5,6 @@ body {
     color: #333;
 }
 
-.settings-container {
-    display: flex;
-    min-height: 100vh;
-}
-
-.sidebar {
-    width: 250px;
-    background: white;
-    padding: 20px;
-    border-right: 1px solid #ddd;
-}
-
-.sidebar h2 {
-    font-size: 18px;
-    margin-bottom: 20px;
-}
-
-.sidebar ul {
-    list-style: none;
-    padding: 0;
-}
-
-.sidebar li {
-    padding: 10px 0;
-    cursor: pointer;
-    color: #555;
-}
-
-.sidebar li.active {
-    font-weight: bold;
-    color: #0a66c2;
-}
-
 .section-content {
     flex: 1;
     padding: 0;
@@ -108,7 +75,7 @@ body {
     display: flex;
     padding-left: 10px;
     align-items: center;
-
+    width: 27px;
 }
 
 .section-heading {
@@ -120,11 +87,12 @@ body {
     display: flex;
     align-items: center;
 }
+
 .style_for_h1 {
     position: relative;
     height: 40px;
     font-size: 19px;
-    padding: 10px 10px 0px 15px;
+    padding: 10px 10px 10px 15px;
     text-decoration: none;
     display: flex;
     align-items: center;
@@ -183,26 +151,27 @@ input[type="file"] {
 .settings-container {
     display: flex;
     height: 100vh;
-  }
-  
-  .sidebar {
-    width: 250px;
+}
+
+.sidebar {
+    width: 300px;
     background-color: white;
     border-right: 1px solid #ddd;
     padding: 20px;
-  }
-  
-  .sidebar h2 {
+}
+
+.sidebar h2 {
     margin-bottom: 20px;
     font-size: 20px;
-  }
-  
-  .sidebar ul {
+    width: 259px;
+}
+
+.sidebar ul {
     list-style: none;
     padding: 0;
-  }
-  
-  .sidebar li {
+}
+
+.sidebar li {
     padding: 10px 15px;
     margin-bottom: 10px;
     border-radius: 6px;
@@ -210,33 +179,27 @@ input[type="file"] {
     display: flex;
     align-items: center;
     gap: 8px;
-  }
-  
-  .sidebar li:hover,
-  .sidebar li.active {
+}
+
+.sidebar li:hover,
+.sidebar li.active {
     background-color: #e6f2ec;
     color: #007d62;
     font-weight: bold;
-  }
-  
-  .content {
-    flex: 1;
-    padding: 30px;
-    overflow-y: auto;
-  }
-  
-  .tab-content {
+}
+
+.tab-content {
     display: block;
-  }
-  
-  .tab-content.hidden {
+}
+
+.tab-content.hidden {
     display: none;
-  }
-  
-  .card {
+}
+
+.card {
     background-color: white;
     padding: 15px 20px;
     border-radius: 8px;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
     margin-bottom: 15px;
-  }
+}
