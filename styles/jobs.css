@@ -23,7 +23,7 @@ main {
     flex-direction: column;
     gap: 15px;
     margin: 0;
-    height: 300px;
+    height: max-content;
     margin: 20px 100px 0px 0px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
 

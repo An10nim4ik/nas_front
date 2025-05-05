@@ -16,7 +16,7 @@ sidebarItems.forEach((item) => {
   });
 });
 
-document.getElementById("resumeUpload").addEventListener("change", function () {
+document.getElementById("resumeUpload")?.addEventListener("change",  function(){
   const file = this.files[0];
   const resumeName = document.getElementById("resume-name");
   if (file && file.type === "application/pdf") {
