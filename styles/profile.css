@@ -1,8 +1,8 @@
 body {
     margin: 0;
     font-family: "Segoe UI", sans-serif;
-    background: #f3f2ef;
-    color: #333;
+    background: #FEFAE0;       /* cream */
+    color: #283618;            /* dark green */
 }
 
 .section-content {
@@ -16,31 +16,30 @@ body {
 }
 
 .section-content__div {
-    background: white;
-
+    background: #f5ebe0;       /* light gold */
+    color: #283618;            /* dark green */
     border-radius: 8px;
-    box-shadow: 0 0 4px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 0 4px rgba(44, 54, 22, 0.15); /* subtle shadow */
 }
 
 .section-content__div h1 {
     font-size: 20px;
     font-weight: 600;
+    color: #283618;            /* dark green */
 }
 
 .section-content__div__p {
     height: 40px;
 }
 
-
 .upload-area {
     height: 180px;
-    padding: 20px 20px 0px 20px;
-
+    padding: 20px 20px 0 20px;
 }
 
 .upload-btn {
-    background-color: #0a66c2;
-    color: white;
+    background-color: #BC6C25; /* warm orange */
+    color: #FEFAE0;            /* cream text */
     padding: 8px 14px;
     border: none;
     border-radius: 6px;
@@ -48,21 +47,21 @@ body {
 }
 
 .upload-btn:hover {
-    background-color: #004182;
+    background-color: #606C38; /* olive green */
 }
 
 .section-content_ul_ul {
     font-weight: 400;
-    font-size: 12;
+    font-size: 12px;
 }
 
-.section-content_ul_ul>li:last-child a section::after {
+.section-content_ul_ul > li:last-child a section::after {
     display: none;
 }
 
-.section-content_ul_ul li>a {
+.section-content_ul_ul li > a {
     text-decoration: none;
-    color: black;
+    color: #283618;            /* dark green links */
 }
 
 .section-content_ul_ul p {
@@ -71,7 +70,7 @@ body {
 }
 
 .section-content_ul_ul_arrow {
-    color: black;
+    color: #606C38;            /* olive green arrows */
     display: flex;
     padding-left: 10px;
     align-items: center;
@@ -86,6 +85,7 @@ body {
     text-decoration: none;
     display: flex;
     align-items: center;
+    color: #283618;            /* dark green */
 }
 
 .style_for_h1 {
@@ -96,16 +96,18 @@ body {
     text-decoration: none;
     display: flex;
     align-items: center;
+    color: #283618;            /* dark green */
 }
 
 .style_for_p {
     position: relative;
     height: 40px;
     font-size: 17px;
-    padding: 0px 10px 10px 15px;
+    padding: 0 10px 10px 15px;
     text-decoration: none;
     display: flex;
     align-items: center;
+    color: #283618;            /* dark green */
 }
 
 .section-heading::after {
@@ -115,7 +117,7 @@ body {
     bottom: 0;
     width: 100%;
     height: 1px;
-    background-color: #ccc;
+    background-color: #606C38; /* olive green underline */
 }
 
 .section-heading::after:last-child {
@@ -127,7 +129,7 @@ body {
     height: 100px;
     object-fit: cover;
     border-radius: 50%;
-    border: 2px solid #ccc;
+    border: 2px solid #606C38; /* olive border */
     display: block;
     margin-bottom: 15px;
 }
@@ -144,7 +146,7 @@ input[type="file"] {
     .sidebar {
         width: 100%;
         border-right: none;
-        border-bottom: 1px solid #ddd;
+        border-bottom: 1px solid #606C38; /* olive border */
     }
 }
 
@@ -155,15 +157,17 @@ input[type="file"] {
 
 .sidebar {
     width: 300px;
-    background-color: white;
-    border-right: 1px solid #ddd;
+    background-color: #3d5225;  /* dark green */
+    border-right: 1px solid #606C38; /* olive border */
     padding: 20px;
+    color: #FEFAE0;             /* cream text */
 }
 
 .sidebar h2 {
     margin-bottom: 20px;
     font-size: 20px;
     width: 259px;
+    color: #DDA15E;             /* gold heading */
 }
 
 .sidebar ul {
@@ -179,12 +183,13 @@ input[type="file"] {
     display: flex;
     align-items: center;
     gap: 8px;
+    color: #FEFAE0;             /* cream text */
 }
 
 .sidebar li:hover,
 .sidebar li.active {
-    background-color: #e6f2ec;
-    color: #007d62;
+    background-color: #BC6C25; /* warm orange highlight */
+    color: #FEFAE0;
     font-weight: bold;
 }
 
@@ -197,9 +202,9 @@ input[type="file"] {
 }
 
 .card {
-    background-color: white;
+    background-color: #FEFAE0; /* cream */
     padding: 15px 20px;
     border-radius: 8px;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 1px 4px rgba(44, 54, 22, 0.15);
     margin-bottom: 15px;
 }

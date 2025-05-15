@@ -1,8 +1,8 @@
 body {
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #F8F9FA;
-    color: #212529;
+    background-color: #FEFAE0;
+    color: #283618;
 }
 
 main {
@@ -11,15 +11,15 @@ main {
     align-items: center;
     min-height: 100vh;
     padding: 2rem;
-    background-color: #F8F9FA;
+    background-color: #FEFAE0;
 }
 
 .auth-box {
     background-color: #FFFFFF;
     padding: 2rem 2.5rem;
     border-radius: 1rem;
-    box-shadow: 0 4px 12px rgba(173, 181, 189, 0.25);
-    border: 1px solid #DEE2E6;
+    box-shadow: 0 4px 12px rgba(96, 108, 56, 0.25);
+    border: 1px solid #606C38;
     width: 100%;
     max-width: 500px;
 }
@@ -28,21 +28,20 @@ main {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 1.5rem;
-    color: #212529;
+    color: #283618;
     font-family: 'Lobster', cursive;
 }
 
 .auth-box_box {
     display: flex;
     justify-content: space-between;
-    
     margin-bottom: 2rem;
 }
 
 .auth-box_box-lg button,
 .auth-box_box-rg button {
-    background-color: #495057;
-    color: #F8F9FA;
+    background-color: #606C38;
+    color: #FEFAE0;
     border: none;
     padding: 12px 24px;
     font-size: 1rem;
@@ -50,17 +49,16 @@ main {
     cursor: pointer;
     transition: background-color 0.3s ease;
     width: 200px;
-    
 }
 
 .auth-box_box-lg button:hover,
 .auth-box_box-rg button:hover {
-    background-color: #343A40;
+    background-color: #283618;
 }
 
 .auth-box_box button.active {
-    background-color: #212529;
-    color: #F8F9FA;
+    background-color: #BC6C25;
+    color: #FEFAE0;
 }
 
 #sign_up,
@@ -71,7 +69,7 @@ main {
 label {
     display: block;
     margin: 0.75rem 0 0.25rem;
-    color: #495057;
+    color: #283618;
     font-weight: 500;
     font-family: 'Raleway', sans-serif;
 }
@@ -79,10 +77,10 @@ label {
 .input_field {
     width: 100%;
     padding: 0.6rem;
-    border: 1px solid #CED4DA;
+    border: 1px solid #DDA15E;
     border-radius: 0.5rem;
-    background-color: #E9ECEF;
-    color: #212529;
+    background-color: #fff4d6;
+    color: #283618;
     margin-bottom: 0.5rem;
     font-size: 1rem;
     transition: border-color 0.2s ease;
@@ -91,7 +89,7 @@ label {
 
 .input_field:focus {
     outline: none;
-    border-color: #495057;
+    border-color: #606C38;
     background-color: #FFFFFF;
 }
 
@@ -101,8 +99,8 @@ label {
 }
 
 .auth-box_btn button {
-    background-color: #495057;
-    color: #F8F9FA;
+    background-color: #606C38;
+    color: #FEFAE0;
     border: none;
     padding: 0.75rem 2rem;
     font-size: 1rem;
@@ -112,7 +110,7 @@ label {
 }
 
 .auth-box_btn button:hover {
-    background-color: #343A40;
+    background-color: #283618;
 }
 
 #sign_up {
@@ -134,13 +132,13 @@ input[type="checkbox"] {
     margin-bottom: 20px;
     flex-wrap: wrap;
     text-align: center;
-  }
-  
-  .social-btn {
-    border: 1px solid #ccc;
+}
+
+.social-btn {
+    border: 1px solid #DDA15E;
     border-radius: 6px;
     padding: 10px 14px;
-    background-color: white;
+    background-color: #FFFFFF;
     cursor: pointer;
     transition: background-color 0.2s ease;
     display: flex;
@@ -148,28 +146,28 @@ input[type="checkbox"] {
     justify-content: center;
     width: 48px;
     height: 48px;
-  }
-  
-  .social-btn img {
+}
+
+.social-btn img {
     width: 24px;
     height: 24px;
-  }
-  
-  .social-btn:hover {
-    background-color: #f0f0f0;
-  }
-  
-  .social-btn.more {
+}
+
+.social-btn:hover {
+    background-color: #fdf4e3;
+}
+
+.social-btn.more {
     font-size: 20px;
     font-weight: bold;
-  }
-  
-  .more-options {
+}
+
+.more-options {
     display: flex;
     gap: 10px;
     margin-top: 10px;
-  }
-  
-  .hidden {
+}
+
+.hidden {
     display: none;
-  }
+}

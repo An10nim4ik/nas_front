@@ -16,199 +16,386 @@
     <title>Your profile</title>
 </head>
 
-    <header>
-        <div class="logo">
-            <h1 id="nas">
-                <a href="index.html">
-                    NAS
-                </a>
-            </h1>
-        </div>
-        <nav>
-            <a href="news.html">News</a>
-            <a href="jobs.html">Jobs</a>
-            <a href="resumes.html">My Resumes</a>
-            <a href="applications.html">Applications</a>
-        </nav>
-        <div class="profile">
-            <a href="profile.html">Profile</a>
-        </div>
-    </header>
+<header>
+    <div class="logo">
+        <h1 id="nas">
+            <a href="index.html">
+                NAS
+            </a>
+        </h1>
+    </div>
+    <nav>
+        <a href="news.html">News</a>
+        <a href="jobs.html">Jobs</a>
+        <a href="resumes.html">My Resumes</a>
+        <a href="applications.html">Applications</a>
+    </nav>
+    <div class="profile">
+        <a href="profile.html">Profile</a>
+    </div>
+</header>
 
-    <body>
-        <div class="settings-container">
-            <aside class="sidebar">
-                <h2>Settings</h2>
-                <ul>
-                    <li class="active" data-tab="account"><span>👤</span> Account Preferences</li>
-                    <li data-tab="security"><span>🔒</span> Sign In & Security</li>
-                    <li data-tab="visibility"><span>👁️</span> Visibility</li>
-                    <li data-tab="privacy"><span>🛡️</span> Data Privacy</li>
-                    <li data-tab="notifications"><span>🔔</span> Notifications</li>
-                </ul>
-            </aside>
-            <main class="section-content">
-                <ul class="section-content_ul tab-content" id="account">
-                    <li class="section-content__li">
-                        <div class="section-content__div">
-                            <div class="upload-area">
-                                <img id="profilePreview" src="icons/profile-circle.svg"
-                                    class="section-content__profile-pic" alt="Profile" />
-                                <label class="upload-btn" for="photoUpload">Upload Photo</label>
-                                <input type="file" id="photoUpload" accept="image/*" />
-                            </div>
-                            <div>
-                                <h1 class="style_for_h1">Profile Information</h1>
-                            </div>
-                            <ul class="section-content_ul_ul">
-                                <li>
-                                    <a href="#">
-                                        <section class="section-heading">
-                                            <div>
-                                                <p>Name, location, and industry</p>
-                                            </div>
-                                            <div class="section-content_ul_ul_arrow">
-                                                <li-icon aria-hidden="true" type="arrow-right-icon" size="small">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
-                                                        data-supported-dps="16x16" fill="currentColor" width="16"
-                                                        height="16" focusable="false">
-                                                        <path
-                                                            d="M9.41 14l-1.29-1.29L11.83 9H2V7h9.83L8.12 3.29 9.41 2l5.29 5.29a1 1 0 010 1.41z">
-                                                        </path>
-                                                    </svg>
-                                                </li-icon>
-                                            </div>
-                                        </section>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <section class="section-heading">
-                                            <div>
-                                                <p>Personal demographic information</p>
-                                            </div>
-                                            <div class="section-content_ul_ul_arrow">
-                                                <li-icon aria-hidden="true" type="arrow-right-icon" size="small">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
-                                                        data-supported-dps="16x16" fill="currentColor" width="16"
-                                                        height="16" focusable="false">
-                                                        <path
-                                                            d="M9.41 14l-1.29-1.29L11.83 9H2V7h9.83L8.12 3.29 9.41 2l5.29 5.29a1 1 0 010 1.41z">
-                                                        </path>
-                                                    </svg>
-                                                </li-icon>
-                                            </div>
-                                        </section>
-                                    </a>
-
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <section class="section-heading">
-                                            <div>
-                                                <p>Verifications</p>
-                                            </div>
-                                            <div class="section-content_ul_ul_arrow">
-                                                <li-icon aria-hidden="true" type="arrow-right-icon" size="small">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
-                                                        data-supported-dps="16x16" fill="currentColor" width="16"
-                                                        height="16" focusable="false">
-                                                        <path
-                                                            d="M9.41 14l-1.29-1.29L11.83 9H2V7h9.83L8.12 3.29 9.41 2l5.29 5.29a1 1 0 010 1.41z">
-                                                        </path>
-                                                    </svg>
-                                                </li-icon>
-                                            </div>
-                                        </section>
-                                    </a>
-                                </li>
-                            </ul>
-
+<body>
+    <div class="settings-container">
+        <aside class="sidebar">
+            <h2>Settings</h2>
+            <ul>
+                <li class="active" data-tab="account"><span>👤</span> Account Preferences</li>
+                <li data-tab="security"><span>🔒</span> Sign In & Security</li>
+                <li data-tab="visibility"><span>👁️</span> Visibility</li>
+                <li data-tab="privacy"><span>🛡️</span> Data Privacy</li>
+                <li data-tab="notifications"><span>🔔</span> Notifications</li>
+            </ul>
+        </aside>
+        <main class="section-content">
+            <ul class="section-content_ul tab-content" id="account">
+                <li class="section-content__li">
+                    <div class="section-content__div">
+                        <div class="upload-area">
+                            <img id="profilePreview" src="icons/profile-circle.svg" class="section-content__profile-pic"
+                                alt="Profile" />
+                            <label class="upload-btn" for="photoUpload">Upload Photo</label>
+                            <input type="file" id="photoUpload" accept="image/*" />
                         </div>
-                    </li>
-                    <li class="section-content__li">
-                        <div class="section-content__div">
-                            <div>
-                                <h1 class="style_for_h1">Display</h1>
-                            </div>
-
-                            <ul class="section-content_ul_ul">
-                                <li>
-                                    <a href="#">
-                                        <section class="style_for_p">
-                                            <div>
-                                                <p>Dark mode</p>
-                                            </div>
-                                            <div class="section-content_ul_ul_arrow">
-                                                <li-icon aria-hidden="true" type="arrow-right-icon" size="small">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
-                                                        data-supported-dps="16x16" fill="currentColor" width="16"
-                                                        height="16" focusable="false">
-                                                        <path
-                                                            d="M9.41 14l-1.29-1.29L11.83 9H2V7h9.83L8.12 3.29 9.41 2l5.29 5.29a1 1 0 010 1.41z">
-                                                        </path>
-                                                    </svg>
-                                                </li-icon>
-                                            </div>
-                                        </section>
-                                    </a>
-                                </li>
-                            </ul>
-
+                        <div>
+                            <h1 class="style_for_h1">Profile Information</h1>
                         </div>
-                    </li>
-                </ul>
+                        <ul class="section-content_ul_ul">
+                            <li>
+                                <a href="#">
+                                    <section class="section-heading">
+                                        <div>
+                                            <p>Name, location, and industry</p>
+                                        </div>
+                                        <div class="section-content_ul_ul_arrow">
+                                            <li-icon aria-hidden="true" type="arrow-right-icon" size="small">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                                                    data-supported-dps="16x16" fill="currentColor" width="16"
+                                                    height="16" focusable="false">
+                                                    <path
+                                                        d="M9.41 14l-1.29-1.29L11.83 9H2V7h9.83L8.12 3.29 9.41 2l5.29 5.29a1 1 0 010 1.41z">
+                                                    </path>
+                                                </svg>
+                                            </li-icon>
+                                        </div>
+                                    </section>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <section class="section-heading">
+                                        <div>
+                                            <p>Personal demographic information</p>
+                                        </div>
+                                        <div class="section-content_ul_ul_arrow">
+                                            <li-icon aria-hidden="true" type="arrow-right-icon" size="small">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                                                    data-supported-dps="16x16" fill="currentColor" width="16"
+                                                    height="16" focusable="false">
+                                                    <path
+                                                        d="M9.41 14l-1.29-1.29L11.83 9H2V7h9.83L8.12 3.29 9.41 2l5.29 5.29a1 1 0 010 1.41z">
+                                                    </path>
+                                                </svg>
+                                            </li-icon>
+                                        </div>
+                                    </section>
+                                </a>
 
-                <div class="tab-content hidden" id="security">
-                    <h3>Sign In Security</h3>
-                    <div class="card">Password</div>
-                    <div class="card">Two-factor authentication</div>
-                </div>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <section class="section-heading">
+                                        <div>
+                                            <p>Verifications</p>
+                                        </div>
+                                        <div class="section-content_ul_ul_arrow">
+                                            <li-icon aria-hidden="true" type="arrow-right-icon" size="small">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                                                    data-supported-dps="16x16" fill="currentColor" width="16"
+                                                    height="16" focusable="false">
+                                                    <path
+                                                        d="M9.41 14l-1.29-1.29L11.83 9H2V7h9.83L8.12 3.29 9.41 2l5.29 5.29a1 1 0 010 1.41z">
+                                                    </path>
+                                                </svg>
+                                            </li-icon>
+                                        </div>
+                                    </section>
+                                </a>
+                            </li>
+                        </ul>
 
-                <div class="tab-content hidden" id="visibility">
-                    <h3>Visibility</h3>
-                    <div class="card">Profile visibility</div>
-                    <div class="card">Activity status</div>
-                </div>
-                <div class="tab-content hidden" id="privacy">
-                    <h3>Data Privacy</h3>
-                    <div class="card">Download your data</div>
-                    <div class="card">Clear search history</div>
-                </div>
-                <div class="tab-content hidden" id="notifications">
-                    <h3>Notifications</h3>
-                    <div class="card">Email notifications</div>
-                    <div class="card">Push notifications</div>
-                </div>
-            </main>
+                    </div>
+                </li>
+                <li class="section-content__li">
+                    <div class="section-content__div">
+                        <div>
+                            <h1 class="style_for_h1">Display</h1>
+                        </div>
 
+                        <ul class="section-content_ul_ul">
+                            <li>
+                                <a href="#">
+                                    <section class="style_for_p">
+                                        <div>
+                                            <p>Dark mode</p>
+                                        </div>
+                                        <div class="section-content_ul_ul_arrow">
+                                            <li-icon aria-hidden="true" type="arrow-right-icon" size="small">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                                                    data-supported-dps="16x16" fill="currentColor" width="16"
+                                                    height="16" focusable="false">
+                                                    <path
+                                                        d="M9.41 14l-1.29-1.29L11.83 9H2V7h9.83L8.12 3.29 9.41 2l5.29 5.29a1 1 0 010 1.41z">
+                                                    </path>
+                                                </svg>
+                                            </li-icon>
+                                        </div>
+                                    </section>
+                                </a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </li>
+            </ul>
+
+            <ul class="tab-content hidden" id="security">
+                <li class="section-content__li">
+                    <div class="section-content__div">
+                        <div>
+                            <h1 class="style_for_h1">Sign In Security</h1>
+                        </div>
+                        <ul class="section-content_ul_ul">
+                            <li>
+                                <a href="#">
+                                    <section class="section-heading">
+                                        <div>
+                                            <p>Password</p>
+                                        </div>
+                                        <div class="section-content_ul_ul_arrow">
+                                            <li-icon aria-hidden="true" type="arrow-right-icon" size="small">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                                                    data-supported-dps="16x16" fill="currentColor" width="16"
+                                                    height="16" focusable="false">
+                                                    <path
+                                                        d="M9.41 14l-1.29-1.29L11.83 9H2V7h9.83L8.12 3.29 9.41 2l5.29 5.29a1 1 0 010 1.41z">
+                                                    </path>
+                                                </svg>
+                                            </li-icon>
+                                        </div>
+                                    </section>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <section class="section-heading">
+                                        <div>
+                                            <p>Two-factor authentication</p>
+                                        </div>
+                                        <div class="section-content_ul_ul_arrow">
+                                            <li-icon aria-hidden="true" type="arrow-right-icon" size="small">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                                                    data-supported-dps="16x16" fill="currentColor" width="16"
+                                                    height="16" focusable="false">
+                                                    <path
+                                                        d="M9.41 14l-1.29-1.29L11.83 9H2V7h9.83L8.12 3.29 9.41 2l5.29 5.29a1 1 0 010 1.41z">
+                                                    </path>
+                                                </svg>
+                                            </li-icon>
+                                        </div>
+                                    </section>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+
+            <ul class="tab-content hidden" id="visibility">
+                <li class="section-content__li">
+                    <div class="section-content__div">
+                        <div>
+                            <h1 class="style_for_h1">Visibility</h1>
+                        </div>
+                        <ul class="section-content_ul_ul">
+                            <li>
+                                <a href="#">
+                                    <section class="section-heading">
+                                        <div>
+                                            <p>Profile visibility</p>
+                                        </div>
+                                        <div class="section-content_ul_ul_arrow">
+                                            <li-icon aria-hidden="true" type="arrow-right-icon" size="small">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                                                    data-supported-dps="16x16" fill="currentColor" width="16"
+                                                    height="16" focusable="false">
+                                                    <path
+                                                        d="M9.41 14l-1.29-1.29L11.83 9H2V7h9.83L8.12 3.29 9.41 2l5.29 5.29a1 1 0 010 1.41z">
+                                                    </path>
+                                                </svg>
+                                            </li-icon>
+                                        </div>
+                                    </section>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <section class="section-heading">
+                                        <div>
+                                            <p>Activity status</p>
+                                        </div>
+                                        <div class="section-content_ul_ul_arrow">
+                                            <li-icon aria-hidden="true" type="arrow-right-icon" size="small">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                                                    data-supported-dps="16x16" fill="currentColor" width="16"
+                                                    height="16" focusable="false">
+                                                    <path
+                                                        d="M9.41 14l-1.29-1.29L11.83 9H2V7h9.83L8.12 3.29 9.41 2l5.29 5.29a1 1 0 010 1.41z">
+                                                    </path>
+                                                </svg>
+                                            </li-icon>
+                                        </div>
+                                    </section>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+
+            <ul class="tab-content hidden" id="privacy">
+                <li class="section-content__li">
+                    <div class="section-content__div">
+                        <div>
+                            <h1 class="style_for_h1">Data Privacy</h1>
+                        </div>
+                        <ul class="section-content_ul_ul">
+                            <li>
+                                <a href="#">
+                                    <section class="section-heading">
+                                        <div>
+                                            <p>Download your data</p>
+                                        </div>
+                                        <div class="section-content_ul_ul_arrow">
+                                            <li-icon aria-hidden="true" type="arrow-right-icon" size="small">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                                                    data-supported-dps="16x16" fill="currentColor" width="16"
+                                                    height="16" focusable="false">
+                                                    <path
+                                                        d="M9.41 14l-1.29-1.29L11.83 9H2V7h9.83L8.12 3.29 9.41 2l5.29 5.29a1 1 0 010 1.41z">
+                                                    </path>
+                                                </svg>
+                                            </li-icon>
+                                        </div>
+                                    </section>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <section class="section-heading">
+                                        <div>
+                                            <p>Clear search history</p>
+                                        </div>
+                                        <div class="section-content_ul_ul_arrow">
+                                            <li-icon aria-hidden="true" type="arrow-right-icon" size="small">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                                                    data-supported-dps="16x16" fill="currentColor" width="16"
+                                                    height="16" focusable="false">
+                                                    <path
+                                                        d="M9.41 14l-1.29-1.29L11.83 9H2V7h9.83L8.12 3.29 9.41 2l5.29 5.29a1 1 0 010 1.41z">
+                                                    </path>
+                                                </svg>
+                                            </li-icon>
+                                        </div>
+                                    </section>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+
+            <ul class="tab-content hidden" id="notifications">
+                <li class="section-content__li">
+                    <div class="section-content__div">
+                        <div>
+                            <h1 class="style_for_h1">Notifications</h1>
+                        </div>
+                        <ul class="section-content_ul_ul">
+                            <li>
+                                <a href="#">
+                                    <section class="section-heading">
+                                        <div>
+                                            <p>Email notifications</p>
+                                        </div>
+                                        <div class="section-content_ul_ul_arrow">
+                                            <li-icon aria-hidden="true" type="arrow-right-icon" size="small">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                                                    data-supported-dps="16x16" fill="currentColor" width="16"
+                                                    height="16" focusable="false">
+                                                    <path
+                                                        d="M9.41 14l-1.29-1.29L11.83 9H2V7h9.83L8.12 3.29 9.41 2l5.29 5.29a1 1 0 010 1.41z">
+                                                    </path>
+                                                </svg>
+                                            </li-icon>
+                                        </div>
+                                    </section>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <section class="section-heading">
+                                        <div>
+                                            <p>Push notifications</p>
+                                        </div>
+                                        <div class="section-content_ul_ul_arrow">
+                                            <li-icon aria-hidden="true" type="arrow-right-icon" size="small">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                                                    data-supported-dps="16x16" fill="currentColor" width="16"
+                                                    height="16" focusable="false">
+                                                    <path
+                                                        d="M9.41 14l-1.29-1.29L11.83 9H2V7h9.83L8.12 3.29 9.41 2l5.29 5.29a1 1 0 010 1.41z">
+                                                    </path>
+                                                </svg>
+                                            </li-icon>
+                                        </div>
+                                    </section>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+
+        </main>
+
+    </div>
+
+    <footer>
+        <div class="info">
+            <h3>
+                Contacts
+            </h3>
+            <h4>
+                Main Developer: Nurasyl Kydyrkozha
+            </h4>
+            <h4>
+                email: nyrdatychto@gmail.com
+            </h4>
         </div>
+        <div class="rights">
+            <h3>
+                All rights are reserved
+            </h3>
+        </div>
+        <div class="copyright">
+            <h3 id="year"></h3>
+        </div>
+    </footer>
 
-        <footer>
-            <div class="info">
-                <h3>
-                    Contacts
-                </h3>
-                <h4>
-                    Main Developer: Nurasyl Kydyrkozha
-                </h4>
-                <h4>
-                    email: nyrdatychto@gmail.com
-                </h4>
-            </div>
-            <div class="rights">
-                <h3>
-                    All rights are reserved
-                </h3>
-            </div>
-            <div class="copyright">
-                <h3 id="year"></h3>
-            </div>
-        </footer>
-
-        <script src="scripts/profile.js"></script>
-        <script src="scripts/index.js"></script>
-        <script src="scripts/connect.js"></script>
-    </body>
+    <script src="scripts/profile.js"></script>
+    <script src="scripts/index.js"></script>
+    <script src="scripts/connect.js"></script>
+</body>
 
 </html>

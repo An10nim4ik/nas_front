@@ -1,5 +1,5 @@
 body {
-    margin: 0px 0px 0px 0px;
+    margin: 0px;
 }
 
 header {
@@ -7,7 +7,7 @@ header {
     grid-template-areas:
         "logo nav profile";
     grid-template-columns: 15% 70% 15%;
-    background-color: #0D1B2A;
+    background-color: #283618; /* dark green */
     width: 100%;
     height: 100px;
     position: sticky;
@@ -28,15 +28,16 @@ header {
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
+    color: #FEFAE0; /* cream */
 }
 
 header a {
-    color: white;
+    color: #FEFAE0; /* cream text */
     text-decoration: none;
 }
 
 header a:hover {
-    color: rgb(255, 255, 81);
+    color: #DDA15E; /* warm beige hover */
 }
 
 nav {

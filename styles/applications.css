@@ -6,8 +6,8 @@
 }
 
 body {
-    background-color: #F8F9FA;
-    color: #212529;
+    background-color: #FEFAE0;
+    color: #283618;
 }
 
 main {
@@ -21,15 +21,15 @@ section {
     background-color: #FFFFFF;
     padding: 24px 32px;
     border-radius: 10px;
-    border: 1px solid #DEE2E6;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+    border: 1px solid #606C38;
+    box-shadow: 0 2px 6px rgba(40, 54, 24, 0.1);
 }
 
 section h1 {
     font-size: 18px;
     font-weight: 500;
     line-height: 1.6;
-    color: #343A40;
+    color: #283618;
 }
 
 .vacancies-list {
@@ -41,13 +41,13 @@ section h1 {
     justify-content: space-between;
     padding: 10px;
     margin-bottom: 10px;
-    border-bottom: 1px solid #DEE2E6;
+    border-bottom: 1px solid #DDA15E;
 }
 
 .vacancy-title {
     font-size: 16px;
     font-weight: 600;
-    color: #343A40;
+    color: #283618;
 }
 
 .vacancy-status {
@@ -59,19 +59,20 @@ section h1 {
 }
 
 .vacancy-status.accepted {
-    background-color: #28a745; /* Green */
+    background-color: #606C38;
 }
 
 .vacancy-status.rejected {
-    background-color: #dc3545; /* Red */
+    background-color: #BC6C25;
 }
 
 .vacancy-status.under-consideration {
-    background-color: #fd7e14; /* Orange */
+    background-color: #DDA15E;
+    color: #283618;
 }
 
 .vacancy-status.unseen {
-    background-color: #6c757d; /* Gray */
+    background-color: #283618;
 }
 
 @media only screen and (max-width: 768px) {
@@ -95,30 +96,56 @@ section h1 {
         font-size: 12px;
     }
 }
-/* Hover effect for vacancy items */
+
 .vacancy {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .vacancy:hover {
-    transform: scale(1.03); /* Slightly scale up on hover */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    transform: scale(1.03);
+    box-shadow: 0 4px 12px rgba(40, 54, 24, 0.2);
 }
 
-/* Tooltip styling */
 .vacancy-status {
     position: relative;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
-
-
 
 .vacancy-status:hover::after {
     opacity: 1;
     visibility: visible;
 }
 
-/* Transition effect for changing status */
-.vacancy-status {
-    transition: background-color 0.3s ease;
+.vacancies-section {
+    flex: 1;
+}
+
+.columns-container {
+    display: flex;
+    gap: 32px;
+}
+
+.vacancy-details {
+    flex: 2;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    border: 1px solid #606C38;
+    background-color: #fff;
+    box-shadow: 0 2px 6px rgba(40, 54, 24, 0.1);
+}
+
+.centered-text {
+    font-size: 16px;
+    color: #606C38;
+    text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+    .columns-container {
+        flex-direction: column;
+    }
 }
