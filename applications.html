@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Lobster&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Lobster&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/footer.css">
@@ -15,6 +18,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
     <title>Applications</title>
 </head>
+
 <body>
     <header>
         <div class="logo">
@@ -32,27 +36,35 @@
     </header>
 
     <main>
-        <section>
-            <h1>Your Vacancies and Their Statuses</h1>
-            <div class="vacancies-list">
-                <div class="vacancy">
-                    <div class="vacancy-title">Job Title 1</div>
-                    <div class="vacancy-status accepted">Accepted</div>
+        <div class="columns-container">
+            <section  class="vacancies-section">
+                <h1>Your Vacancies and Their Statuses</h1>
+                <div class="vacancies-list">
+                    <div class="vacancy">
+                        <div class="vacancy-title">Job Title 1</div>
+                        <div class="vacancy-status accepted">Accepted</div>
+                    </div>
+                    <div class="vacancy">
+                        <div class="vacancy-title">Job Title 2</div>
+                        <div class="vacancy-status rejected">Rejected</div>
+                    </div>
+                    <div class="vacancy">
+                        <div class="vacancy-title">Job Title 3</div>
+                        <div class="vacancy-status under-consideration">Under Consideration</div>
+                    </div>
+                    <div class="vacancy">
+                        <div class="vacancy-title">Job Title 4</div>
+                        <div class="vacancy-status unseen">Unseen</div>
+                    </div>
                 </div>
-                <div class="vacancy">
-                    <div class="vacancy-title">Job Title 2</div>
-                    <div class="vacancy-status rejected">Rejected</div>
+            </section>
+
+            <section class="vacancy-details">
+                <div id="vacancy-details-content" class="centered-text">
+                    Select a vacancy
                 </div>
-                <div class="vacancy">
-                    <div class="vacancy-title">Job Title 3</div>
-                    <div class="vacancy-status under-consideration">Under Consideration</div>
-                </div>
-                <div class="vacancy">
-                    <div class="vacancy-title">Job Title 4</div>
-                    <div class="vacancy-status unseen">Unseen</div>
-                </div>
-            </div>
-        </section>
+            </section>
+        </div>
     </main>
 
     <footer>
@@ -78,6 +90,7 @@
     </footer>
 
     <script src="scripts/index.js"></script>
-    <script src="scripts/connect.js"></script>    
+    <script src="scripts/connect.js"></script>
 </body>
+
 </html>

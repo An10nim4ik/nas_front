@@ -36,41 +36,45 @@
     </header>
 
     <main>
-        
-        <section class="resume-upload">
-            <h2>Upload Resume</h2>
-            <input type="file" id="resumeInput" accept=".pdf,.doc,.docx">
-            <p id="uploadStatus"></p>
-        </section>
-
-        <section class="resume-list">
-            <h2>My Resumes</h2>
-            <ul id="resumeList">
-                <!-- Example -->
-                <li>
-                    resume_nurasyl.pdf
-                    <button class="btn view">View</button>
-                    <button class="btn download">Download</button>
-                    <button class="btn delete">Delete</button>
-                </li>
-            </ul>
-        </section>
-
-        <section class="resume-builder">
-            <h2>Build Resume</h2>
-            <form id="resumeForm">
-                <input type="text" placeholder="Full Name" required>
-                <input type="email" placeholder="Email" required>
-                <input type="tel" placeholder="Phone Number" required>
-                <textarea placeholder="Education"></textarea>
-                <textarea placeholder="Work Experience"></textarea>
-                <textarea placeholder="Skills"></textarea>
-                <textarea placeholder="Summary"></textarea>
-                <button type="submit" class="btn">Generate Resume</button>
-            </form>
-        </section>
 
 
+        <div class="left-column">
+            <section class="resume-upload">
+                <h2>Upload Resume</h2>
+                <input type="file" id="resumeInput" accept=".pdf,.doc,.docx">
+                <p id="uploadStatus"></p>
+            </section>
+
+            <section class="resume-list">
+                <h2>My Resumes</h2>
+                <ul id="resumeList">
+                    <!-- Example -->
+                    <li>
+                        resume_nurasyl.pdf
+                        <button class="btn view">View</button>
+                        <button class="btn download">Download</button>
+                        <button class="btn delete">Delete</button>
+                    </li>
+                </ul>
+            </section>
+        </div>
+
+
+        <div class="right-column">
+            <div class="resume-builder">
+                <h2>Build Resume</h2>
+                <form id="resumeForm">
+                    <input type="text" placeholder="Full Name" required>
+                    <input type="email" placeholder="Email" required>
+                    <input type="tel" placeholder="Phone Number" required>
+                    <textarea placeholder="Education"></textarea>
+                    <textarea placeholder="Work Experience"></textarea>
+                    <textarea placeholder="Skills"></textarea>
+                    <textarea placeholder="Summary"></textarea>
+                    <button type="submit" class="btn">Generate Resume</button>
+                </form>
+            </div>
+        </div>
 
     </main>
     <footer>

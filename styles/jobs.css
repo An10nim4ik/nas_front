@@ -9,30 +9,31 @@ main {
     display: flex;
     gap: 32px;
     padding: 0;
-    background-color: #F8F9FA;
-    color: #212529;
+    background-color: #FEFAE0;
+    color: #283618;
+    margin-bottom: 90px;
 }
 
 #filters {
     width: 280px;
     padding: 20px;
-    background-color: #E9ECEF;
+    height: 500px;
+    background-color: #FEFAE0;
     border-radius: 15px;
-    border: 1px solid #E1E4E8;
+    border: 1px solid #DDA15E;
     display: flex;
     flex-direction: column;
     gap: 15px;
     margin: 0;
     height: max-content;
     margin: 20px 100px 0px 0px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
-
+    box-shadow: 0 2px 5px rgba(96, 108, 56, 0.05);
 }
 
 #filters input[type="search"] {
-    width: 100%;
+    width: 50%;
     padding: 10px 14px;
-    border: 1px solid #DDE2E8;
+    border: 1px solid #CED4DA;
     border-radius: 8px;
     font-size: 14px;
     outline: none;
@@ -43,17 +44,17 @@ main {
     align-items: center;
     width: 100%;
     max-width: 800px;
-    border: 1px solid #DDE2E8;
+    border: 1px solid #DDA15E;
     border-radius: 10px;
     overflow: hidden;
-    background-color: white;
+    background-color: #FFFFFF;
 }
 
 #search {
     border: none;
     outline: none;
     font-size: 16px;
-    color: #495057;
+    color: #606C38;
 }
 
 .check {
@@ -69,9 +70,10 @@ main {
     gap: 10px;
     font-size: 14px;
 }
+
 .filter-group label {
     margin-bottom: 5px;
-    color: #555;
+    color: #606C38;
 }
 
 .filter-group select {
@@ -81,36 +83,38 @@ main {
     font-size: 14px;
     outline: none;
     background-color: #FFFFFF;
-    color: #495057;
-}   
+    color: #283618;
+}
 
 #vacancies {
     display: flex;
     flex-direction: column;
     gap: 16px;
+    margin-bottom: 15px;
 }
 
-#vacancies>div {
-    background-color: #FFFFFF;
+#vacancies > div {
+    background-color: #FEFAE0;
     padding: 16px;
     border-radius: 8px;
-    border: 1px solid #DEE2E6;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    border: 1px solid #DDA15E;
+    box-shadow: 0 2px 4px rgba(96, 108, 56, 0.05);
 }
 
 .link {
     margin-top: 8px;
     padding: 8px;
-    background-color: #ADB5BD;
+    background-color: #BC6C25;
     border-radius: 4px;
     text-align: center;
-    color: #FFFFFF;
+    color: #FEFAE0;
     font-weight: bold;
     transition: 0.3s ease;
 }
 
 .link:hover {
-    background-color: #2d7fc7;
+    background-color: #DDA15E;
+    color: #283618;
 }
 
 .Pages {
@@ -125,31 +129,31 @@ button {
     padding: 8px 16px;
     border: none;
     border-radius: 6px;
-    background-color: #6C757D;
-    color: #FFFFFF;
+    background-color: #BC6C25;
+    color: #FEFAE0;
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #495057;
+    background-color: #DDA15E;
+    color: #283618;
 }
 
 #pageDisplay1,
 #pageDisplay2 {
     font-weight: bold;
-    color: #212529;
+    color: #283618;
 }
 
 .container {
     box-sizing: border-box;
-    display: block;
+    display: flex;
     font-size: 14px;
     font-weight: 400;
-    margin: 0px 340px 0px 340px;
+    margin: 0px 340px;
     width: 1200px;
-    display: flex;
 }
 
 .size {
@@ -157,12 +161,13 @@ button:hover {
     margin-top: 20px;
 }
 
-@media only screen and (max-width: 1366px){
-    .container{
+@media only screen and (max-width: 1366px) {
+    .container {
         width: 1000px;
-        margin: 0px 240px 0px 240px;
+        margin: 0px 240px;
     }
-    .size{
+
+    .size {
         width: 600px;
     }
 }

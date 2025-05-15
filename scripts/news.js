@@ -99,7 +99,9 @@ async function displayData(articles){
   container.innerHTML = '';
   articles.forEach(article => {
     const newsDiv = document.createElement("div");
-    newsDiv.innerHTML = `<h1>${article.title}</h1>
+    newsDiv.innerHTML = `
+      <img src="${article.urlToImage || 'https://yt3.googleusercontent.com/ytc/AGIKgqMMKEuWlO6sLE4YuSil9TAQXjl5s3VZWbyOTui4=s900-c-k-c0x00ffffff-no-rj'}" alt="${article.title}" class="article-image"/>
+      <h1>${article.title}</h1>
       <h5>${article.description}</h5>
       <div class="link"><p>More information</p></div>
     `;
@@ -111,6 +113,12 @@ async function displayData(articles){
   });
 }
 
+
+document.getElementById('search').addEventListener('input', (event) =>{
+  curQuery = event.target.value;
+  console.log(`Using search! input = ${event.target.value}`);
+  fetchNews();
+  displayHistory();
 document.getElementById('find').addEventListener('click', (event) =>{
   const newsTitle = document.getElementById('search');
   curQuery = newsTitle.value;

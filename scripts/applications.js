@@ -63,3 +63,21 @@ document.addEventListener('DOMContentLoaded', () => {
         newStatus.addEventListener('click', changeStatus);
     });
 });
+
+// Add this inside DOMContentLoaded
+const vacancyItems = document.querySelectorAll('.vacancy');
+const detailsContent = document.getElementById('vacancy-details-content');
+
+vacancyItems.forEach((vacancy) => {
+    vacancy.addEventListener('click', () => {
+        const title = vacancy.querySelector('.vacancy-title').textContent;
+        const status = vacancy.querySelector('.vacancy-status').textContent;
+        detailsContent.innerHTML = `
+            <div>
+                <h2 style="font-size:20px; color:#343A40;">${title}</h2>
+                <p style="margin-top:10px;">Status: <strong>${status}</strong></p>
+                <p style="margin-top:10px; color: #6c757d;">More detailed description about the vacancy will appear here...</p>
+            </div>
+        `;
+    });
+});
