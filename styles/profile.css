@@ -207,4 +207,13 @@ input[type="file"] {
     border-radius: 8px;
     box-shadow: 0 1px 4px rgba(44, 54, 22, 0.15);
     margin-bottom: 15px;
+
+
+  }
+
+
+@media only screen and (max-width: 1366px){
+    .section-content{
+        margin: 30px 125px 30px 125px;  
+    }
 }
