@@ -119,6 +119,8 @@ document.getElementById('search').addEventListener('input', (event) =>{
   console.log(`Using search! input = ${event.target.value}`);
   fetchNews();
   displayHistory();
+});
+
 document.getElementById('find').addEventListener('click', (event) =>{
   const newsTitle = document.getElementById('search');
   curQuery = newsTitle.value;
