@@ -121,6 +121,14 @@ document.getElementById('search').addEventListener('input', (event) =>{
   displayHistory();
 });
 
+
+document.getElementById('search').addEventListener('input', (event) =>{
+  curQuery = event.target.value;
+  console.log(`Using search! input = ${event.target.value}`);
+  fetchNews();
+  displayHistory();
+});
+
 document.getElementById('find').addEventListener('click', (event) =>{
   const newsTitle = document.getElementById('search');
   curQuery = newsTitle.value;

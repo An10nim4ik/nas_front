@@ -18,37 +18,6 @@ body {
         opacity: 1;
     }
 }
-
-.section-about {
-    height: 530px;
-    background: url(../imgs/Industrial_Control_Room.jpeg) center/cover no-repeat;
-    position: relative;
-    margin-bottom: 20px;
-    z-index: -1;
-}
-
-.section-about__block {
-    width: 420px;
-    height: 190px;
-    position: absolute;
-    top: 54%;
-    left: 51%;
-    text-align: center;
-    padding-top: 15px;
-}
-
-.section-about__title {
-    font-size: 36px;
-    margin: 0 0 9px 0;
-    color: #606C38; /* olive green */
-}
-
-.section-about__text {
-    font-size: 12px;
-    margin: 0;
-    color: #606C38;
-}
-
 .container {
     box-sizing: border-box;
     display: block;
@@ -57,6 +26,10 @@ body {
     margin: 0px 340px;
     width: 1200px;
     color: #283618;
+}
+
+button:hover {
+    background-color: #495057;
 }
 
 button {
@@ -244,7 +217,6 @@ a:hover .link {
     font-weight: 400;
     margin: 0px 340px;
     width: 1200px;
-    display: flex;
 }
 
 .Pages {
@@ -271,9 +243,11 @@ a:hover .link {
     flex-direction: column;
     gap: 15px;
     margin: 0;
-    height: max-content;
+
+    height: 300px;
     margin: 20px 60px 0 0;
     box-shadow: 0 2px 5px rgba(44, 54, 24, 0.03);
+
 }
 
 .filters input[type="search"] {
