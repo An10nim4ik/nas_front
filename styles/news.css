@@ -244,6 +244,21 @@ a:hover .link {
     font-weight: 400;
     margin: 0px 340px;
     width: 1200px;
+    display: flex;
+}
+
+.Pages {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+#pageDisplay1,
+#pageDisplay2 {
+    font-weight: bold;
+    color: #212529;
 }
 
 .filters {
@@ -256,7 +271,7 @@ a:hover .link {
     flex-direction: column;
     gap: 15px;
     margin: 0;
-    height: 300px;
+    height: max-content;
     margin: 20px 60px 0 0;
     box-shadow: 0 2px 5px rgba(44, 54, 24, 0.03);
 }

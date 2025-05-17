@@ -1,26 +1,36 @@
-// const backgrounds = ["url('../imgs/Industrial_Control_Room.jpeg')", "url('imgs/Man_Working_in_Cozy.jpeg')", "url('imgs/Woodworker_at_Work.jpeg')"]
-// const randomIndex = Math.floor(Math.random() * backgrounds.length);
-// const section = document.querySelector(".section-about");
-// section.style.backgroundImage = backgrounds[randomIndex];
-
-
-// const links = document.querySelectorAll('.section-anchor__links a');
-
-//   links.forEach(link => {
-//     link.addEventListener('click', function () {
-//       // Remove active class from all links
-//       links.forEach(l => l.classList.remove('active'));
-//       // Add active class to the clicked link
-//       this.classList.add('active');
-//     });
-//   });
-
 let curQuery = "job market";
 
 let history = [];
 
+let curPage = 1;
+let totalPages = 1;
+
 window.addEventListener("DOMContentLoaded", function(){
   fetchNews();
+  this.document.getElementById('prevBtn1').addEventListener('click', () =>{
+    if(curPage > 1){
+        curPage--;
+        fetchNews();
+    } 
+  });
+  this.document.getElementById('prevBtn2').addEventListener('click', () =>{
+    if(curPage > 1){
+          curPage--;
+          fetchNews();
+      }
+  });
+  this.document.getElementById('nextBtn1').addEventListener('click', () =>{
+      if(curPage < totalPages){
+          curPage++;
+          fetchNews();
+      }
+  });
+  this.document.getElementById('nextBtn2').addEventListener('click', () =>{
+      if(curPage < totalPages){
+          curPage++;
+          fetchNews();
+      }
+  });
 });
 
 
@@ -62,7 +72,7 @@ function buildUrl(){
   let baseUrl = "https://newsapi.org/v2/everything";
   let API_KEY = apikey;
   const query = curQuery;
-  const url = `${baseUrl}?q=${query}&apiKey=${API_KEY}`; 
+  const url = `${baseUrl}?q=${query}&searchin=title&page=${curPage}&sortBy=popularity&pageSize=10&apiKey=${API_KEY}`; 
   return url;
 }
 
@@ -74,17 +84,19 @@ async function fetchNews(){
       throw new Error(`HTTP error! status: ${response.status}`);
     }
     let data = await response.json();
+    document.getElementById('pageDisplay1').textContent = `Page ${curPage}`;
+    document.getElementById('pageDisplay2').textContent = `Page ${curPage}`;
+    totalPages = data.totalResults;
+    totalPages = parseInt((totalPages + 9) / 10 ? (totalPages + 9) / 10 : 1);
     displayData(data.articles);
   }catch (error){
     console.error("Error fetching news org: ", error);
   }
 }
 
-
 async function displayData(articles){
   const container = document.getElementById("news");
   container.innerHTML = '';
-
   articles.forEach(article => {
     const newsDiv = document.createElement("div");
     newsDiv.innerHTML = `
@@ -109,15 +121,34 @@ document.getElementById('search').addEventListener('input', (event) =>{
   displayHistory();
 });
 
-document.getElementById('search').addEventListener('focusout', (event) =>{
-  curQuery = event.target.value;
-  console.log(`Using search! input = ${event.target.value}`);
-  history.push(curQuery);
-  fetchNews();
-  displayHistory();
+document.getElementById('find').addEventListener('click', (event) =>{
+  const newsTitle = document.getElementById('search');
+  curQuery = newsTitle.value;
+  console.log(`Using search! input = ${newsTitle.value}`);
+  if(curQuery != ""){
+    curPage = 1;
+    history.push(curQuery);
+    fetchNews();
+    displayHistory();
+  }
+
 });
 
-function displayHistory(){
+document.getElementById('search').addEventListener('keypress', (event) =>{
+  if(event.key === "Enter"){
+    curQuery = event.target.value;
+    console.log(`Using search! input = ${event.target.value}`);
+    if(curQuery != ""){
+      curPage = 1;
+      history.push(curQuery);
+      fetchNews();
+      displayHistory();
+    }
+  }
+});
+
+
+async function displayHistory(){
   const container = document.getElementById('history');
   container.innerHTML = '';
 
