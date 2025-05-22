@@ -206,25 +206,36 @@ async function displayProfFields(categories) {
     });
 }
 
-async function displayData(vacancies){
+async function displayData(vacancies) {
     const container = document.getElementById("vacancies");
     container.innerHTML = '';
 
     vacancies.forEach(vacancy => {
         const vacancyDiv = document.createElement('div');
-        vacancyDiv.innerHTML = `<h3>${vacancy.name}</h3>
-        <p>Employer: ${vacancy.employer ? vacancy.employer.name : "N/A"}
-        <p>Salary:</p>
+        vacancyDiv.classList.add('vacancy-card'); // Optional class for styling
+
+        let html = `
+            <h3>${vacancy.name}</h3>
+            <p><strong>Employer:</strong> ${vacancy.employer ? vacancy.employer.name : "N/A"}</p>
         `;
-        if(vacancy.salary){
-            vacancyDiv.innerHTML +=`
-                <p>Salary from: ${vacancy.salary.from ? vacancy.salary.from : "N/A"}
-                <p>Salary to: ${vacancy.salary.to ? vacancy.salary.to : "N/A"}
-                <p>Currecy ${vacancy.salary.currency}`;
-        }else{
-            vacancyDiv.innerHTML += `<p>Not specified</p>`;
+
+        if (vacancy.salary) {
+            html += `
+                <p><strong>Salary from:</strong> ${vacancy.salary.from ?? "N/A"}</p>
+                <p><strong>Salary to:</strong> ${vacancy.salary.to ?? "N/A"}</p>
+                <p><strong>Currency:</strong> ${vacancy.salary.currency ?? "N/A"}</p>
+            `;
+        } else {
+            html += `<p><strong>Salary:</strong> Not specified</p>`;
         }
-        vacancyDiv.innerHTML += `<a href="vacancy.html?id=${vacancy.id}" target="_blank"><div class="link"><p>More information</p></div></a>`;
+
+        html += `
+            <a href="vacancy.html?id=${vacancy.id}" target="_blank">
+                <div class="link"><p>More information</p></div>
+            </a>
+        `;
+
+        vacancyDiv.innerHTML = html;
         container.appendChild(vacancyDiv);
     });
 }

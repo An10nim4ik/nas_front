@@ -50,8 +50,8 @@ button:hover {
 #news {
     display: flex;
     flex-direction: column;
-    gap: 22px;
-    z-index: -1;
+    gap: 24px;
+    margin-top: 24px;
 }
 
 #news h1 {
@@ -178,17 +178,14 @@ a:hover .link {
     background: #DDA15E;
 }
 
-.size {
-    width: 100%;
-    margin-top: 20px;
-}
-
 #search {
     border: none;
     outline: none;
     font-size: 16px;
     color: #606C38;
 }
+
+
 
 .search-wrapper {
     display: flex;
@@ -215,8 +212,8 @@ a:hover .link {
     display: flex;
     font-size: 14px;
     font-weight: 400;
-    margin: 0px 340px;
-    width: 1200px;
+    margin: 0px 100px;
+    width: 100%;
 }
 
 .Pages {
@@ -225,6 +222,7 @@ a:hover .link {
     align-items: center;
     gap: 16px;
     margin-bottom: 20px;
+    margin-top: 20px;
 }
 
 #pageDisplay1,
@@ -234,20 +232,21 @@ a:hover .link {
 }
 
 .filters {
-    width: 280px;
-    padding: 20px;
-    background-color: #FEFAE0;
-    border-radius: 15px;
-    border: 1px solid #DDA15E;
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
-    flex-direction: column;
-    gap: 15px;
-    margin: 0;
-
-    height: 300px;
-    margin: 20px 60px 0 0;
-    box-shadow: 0 2px 5px rgba(44, 54, 24, 0.03);
-
+    gap: 16px;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    margin-top: 20px;
+    padding: 0;
+}
+.size {
+    width: 100%;
+    display: block;
+    
 }
 
 .filters input[type="search"] {
