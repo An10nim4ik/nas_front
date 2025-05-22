@@ -15,7 +15,7 @@ main {
 }
 
 #filters {
-    width: 280px;
+    width: 400px;
     padding: 20px;
     height: 500px;
     background-color: #FEFAE0;
@@ -26,8 +26,9 @@ main {
     gap: 15px;
     margin: 0;
     height: max-content;
-    margin: 20px 100px 0px 0px;
+    margin: 20px 80px 20px 20px;
     box-shadow: 0 2px 5px rgba(96, 108, 56, 0.05);
+
 }
 
 #filters input[type="search"] {
@@ -93,6 +94,13 @@ main {
     margin-bottom: 15px;
 }
 
+.vacancy-card {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    background-color: #fafafa;
+}
 #vacancies > div {
     background-color: #FEFAE0;
     padding: 16px;
@@ -110,6 +118,8 @@ main {
     color: #FEFAE0;
     font-weight: bold;
     transition: 0.3s ease;
+    text-decoration: none;
+
 }
 
 .link:hover {
