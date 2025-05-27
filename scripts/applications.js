@@ -1,20 +1,16 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Function to change status
     const changeStatus = (event) => {
         const statusElement = event.target;
-        const currentStatus = statusElement.classList[1]; // Get current status class
+        const currentStatus = statusElement.classList[1]; 
 
-        // Define the next status cycle
         const statusCycle = ['accepted', 'under-consideration', 'rejected', 'unseen'];
         const nextStatus = statusCycle[(statusCycle.indexOf(currentStatus) + 1) % statusCycle.length];
 
-        // Update status class and tooltip
         statusElement.classList.remove(currentStatus);
         statusElement.classList.add(nextStatus);
         statusElement.setAttribute('data-tooltip', getStatusTooltip(nextStatus));
     };
 
-    // Function to get status tooltip text
     const getStatusTooltip = (status) => {
         switch (status) {
             case 'accepted':
@@ -30,13 +26,11 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    // Add event listeners to status badges for changing status
     const statusBadges = document.querySelectorAll('.vacancy-status');
     statusBadges.forEach((statusBadge) => {
         statusBadge.addEventListener('click', changeStatus);
     });
 
-    // Function to add a new vacancy dynamically
     const addVacancyButton = document.createElement('button');
     addVacancyButton.textContent = 'Add Vacancy';
     addVacancyButton.style.marginTop = '20px';
@@ -59,12 +53,10 @@ document.addEventListener('DOMContentLoaded', () => {
         newVacancy.appendChild(newStatus);
         vacancyList.appendChild(newVacancy);
 
-        // Add event listener for the newly added status badge
         newStatus.addEventListener('click', changeStatus);
     });
 });
 
-// Add this inside DOMContentLoaded
 const vacancyItems = document.querySelectorAll('.vacancy');
 const detailsContent = document.getElementById('vacancy-details-content');
 
