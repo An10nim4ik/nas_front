@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+
     const changeStatus = (event) => {
         const statusElement = event.target;
         const currentStatus = statusElement.classList[1]; 

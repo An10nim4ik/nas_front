@@ -97,6 +97,29 @@ document.addEventListener("DOMContentLoaded", () => {
         event.preventDefault();
         if (!buildResumeForm) return;
 
+
+        const fileURL = URL.createObjectURL(file);
+
+        const viewBtn = document.createElement("button");
+        viewBtn.textContent = "View";
+        viewBtn.onclick = () => window.open(fileURL, "_blank");
+
+        const downloadBtn = document.createElement("button");
+        downloadBtn.textContent = "Download";
+        downloadBtn.onclick = () => {
+            const a = document.createElement("a");
+            a.href = fileURL;
+            a.download = file.name;
+            a.click();
+        };
+
+        const deleteBtn = document.createElement("button");
+        deleteBtn.textContent = "Delete";
+        deleteBtn.onclick = () => {
+            listItem.remove();
+            URL.revokeObjectURL(fileURL);
+        };
+
         const skills = buildResumeForm.querySelector('textarea[name="skills"]').value;
         const experience = buildResumeForm.querySelector('textarea[name="experience"]').value;
         const education = buildResumeForm.querySelector('textarea[name="education"]').value;
@@ -240,12 +263,19 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
+
     if (resumeUploadInput) {
         resumeUploadInput.addEventListener("change", handleResumeFileUpload);
     }
     if (buildResumeForm) {
         buildResumeForm.addEventListener("submit", handleBuildOrUpdateResumeSubmit); 
     }
+
+
+        uploadStatus.textContent = "✅ File uploaded successfully!";
+        fileInput.value = ""; 
+    });
+});
 
     loadUserResumes();
 });

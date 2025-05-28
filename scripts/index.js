@@ -5,6 +5,10 @@ document.addEventListener('DOMContentLoaded', () => {
         yearElement.innerHTML = "Copyright (c) " + d.getFullYear();
     }
 
+
+let d = new Date();
+document.getElementById("year").innerHTML = "Copyright (c) " + d.getFullYear();
+
     const logoutButton = document.getElementById('logoutButton');
     const profileLinkAnchor = document.querySelector('div.profile > a[href="profile.html"]');
     const getStartedButton = document.querySelector('a[href="auth.html"] > button.cta-button');
@@ -42,3 +46,4 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
