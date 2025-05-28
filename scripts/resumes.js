@@ -16,15 +16,12 @@ document.addEventListener("DOMContentLoaded", () => {
         const buttonsDiv = document.createElement("div");
         buttonsDiv.className = "resume-buttons";
 
-        // Create blob URL
         const fileURL = URL.createObjectURL(file);
 
-        // View Button
         const viewBtn = document.createElement("button");
         viewBtn.textContent = "View";
         viewBtn.onclick = () => window.open(fileURL, "_blank");
 
-        // Download Button
         const downloadBtn = document.createElement("button");
         downloadBtn.textContent = "Download";
         downloadBtn.onclick = () => {
@@ -34,7 +31,6 @@ document.addEventListener("DOMContentLoaded", () => {
             a.click();
         };
 
-        // Delete Button
         const deleteBtn = document.createElement("button");
         deleteBtn.textContent = "Delete";
         deleteBtn.onclick = () => {
@@ -47,6 +43,6 @@ document.addEventListener("DOMContentLoaded", () => {
         resumeList.appendChild(listItem);
 
         uploadStatus.textContent = "✅ File uploaded successfully!";
-        fileInput.value = ""; // Clear input
+        fileInput.value = ""; 
     });
 });

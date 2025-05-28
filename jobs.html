@@ -144,9 +144,25 @@
                 </button>
             </div>
         </section>
-        <section class="section__ML">
+        <div id="cv-recommendation-block">
+            <h2>Select a CV for Job Recommendations</h2>
 
-        </section>
+            <form id="cv-selection-form">
+                <div id="cv-list">
+                    <!-- CVs dynamically loaded here -->
+                </div>
+
+                <div class="recommendation-count">
+                    <label for="recommendation-limit">Number of recommendations (1–50):</label>
+                    <input type="number" id="recommendation-limit" name="recommendation-limit" min="1" max="50"
+                        value="10">
+                </div>
+                
+                <button type="submit">Get Recommendations</button>
+            </form>
+
+            <div id="recommendations-output" style="margin-top: 20px;"></div>
+        </div>
     </main>
 
 

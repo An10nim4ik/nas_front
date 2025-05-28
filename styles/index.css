@@ -1,8 +1,8 @@
 body {
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #FEFAE0; /* light cream */
-    color: #283618; /* dark text */
+    background-color: #FEFAE0; 
+    color: #283618; 
 }
 
 main {
@@ -18,8 +18,8 @@ main {
     background-color: #FFFFFF;
     padding: 32px 200px;
     border-radius: 1rem;
-    box-shadow: 0 4px 16px rgba(96, 108, 56, 0.2); /* olive shadow */
-    border: 1px solid #DDA15E; /* light accent border */
+    box-shadow: 0 4px 16px rgba(96, 108, 56, 0.2); 
+    border: 1px solid #DDA15E; 
 }
 
 .welcome h1 {
@@ -46,7 +46,7 @@ main {
 }
 
 .cta-button {
-    background-color: #BC6C25; /* primary accent */
+    background-color: #BC6C25;
     color: #FEFAE0;
     border: none;
     padding: 12px 24px;
@@ -57,5 +57,5 @@ main {
 }
 
 .cta-button:hover {
-    background-color: #DDA15E; /* hover accent */
+    background-color: #DDA15E; 
 }

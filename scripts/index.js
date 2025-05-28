@@ -4,7 +4,3 @@ function myFunction(){
 
 let d = new Date();
 document.getElementById("year").innerHTML = "Copyright (c) " + d.getFullYear();
-
-// function sortAll(n){
-
-// }

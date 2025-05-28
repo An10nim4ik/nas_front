@@ -250,7 +250,7 @@ async function displayData(vacancies) {
 
 
 /*
-
+.
 !!!EVENT LISTENERS FOR FILTERS!!!
             START
 
@@ -325,3 +325,56 @@ document.getElementById("employment").addEventListener("change", (event) =>{
             END
 
 */
+
+ // Sample CVs - this should come from your backend
+  const userCVs = [
+    { id: 'cv1', name: 'Frontend Developer Resume' },
+    { id: 'cv2', name: 'Data Analyst Resume' }
+  ];
+
+  // Render CV options
+  const cvListDiv = document.getElementById('cv-list');
+  userCVs.forEach(cv => {
+    const label = document.createElement('label');
+    label.innerHTML = `
+      <input type="radio" name="cv" value="${cv.id}" required>
+      ${cv.name}
+    `;
+    cvListDiv.appendChild(label);
+    cvListDiv.appendChild(document.createElement('br'));
+  });
+
+  // Handle form submission
+  document.getElementById('cv-selection-form').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const selectedCV = document.querySelector('input[name="cv"]:checked').value;
+
+    // Make request to ML backend
+    try {
+      const response = await fetch('/api/recommend-jobs', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ cv_id: selectedCV })
+      });
+      const data = await response.json();
+
+      // Show recommendations
+      const output = document.getElementById('recommendations-output');
+      output.innerHTML = '<h3>Recommended Jobs:</h3><ul>' +
+        data.recommendations.map(job => `<li>${job}</li>`).join('') +
+        '</ul>';
+    } catch (err) {
+      console.error('Error:', err);
+      alert('Failed to fetch job recommendations.');
+    }
+  });
+
+  // Example of adding CV items dynamically
+const cvList = document.getElementById('cv-list');
+cvData.forEach(cv => {
+  const div = document.createElement('div');
+  div.className = 'cv-item';
+  div.textContent = cv.name;
+  div.dataset.cvId = cv.id;
+  cvList.appendChild(div);
+});

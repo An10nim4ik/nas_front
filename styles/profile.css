@@ -1,8 +1,8 @@
 body {
     margin: 0;
     font-family: "Segoe UI", sans-serif;
-    background: #FEFAE0;       /* cream */
-    color: #283618;            /* dark green */
+    background: #FEFAE0;      
+    color: #283618;           
 }
 
 .section-content {
@@ -16,16 +16,16 @@ body {
 }
 
 .section-content__div {
-    background: #f5ebe0;       /* light gold */
-    color: #283618;            /* dark green */
+    background: #f5ebe0;       
+    color: #283618;           
     border-radius: 8px;
-    box-shadow: 0 0 4px rgba(44, 54, 22, 0.15); /* subtle shadow */
+    box-shadow: 0 0 4px rgba(44, 54, 22, 0.15); 
 }
 
 .section-content__div h1 {
     font-size: 20px;
     font-weight: 600;
-    color: #283618;            /* dark green */
+    color: #283618;           
 }
 
 .section-content__div__p {
@@ -38,8 +38,8 @@ body {
 }
 
 .upload-btn {
-    background-color: #BC6C25; /* warm orange */
-    color: #FEFAE0;            /* cream text */
+    background-color: #BC6C25;
+    color: #FEFAE0;            
     padding: 8px 14px;
     border: none;
     border-radius: 6px;
