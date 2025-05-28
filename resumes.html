@@ -16,7 +16,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
-    <title>My resumes</title>
+    <title>My Resumes</title>
 </head>
 
 <body>
@@ -31,13 +31,12 @@
             <a href="applications.html">Applications</a>
         </nav>
         <div class="profile">
-            <a href="profile.html">Profile</a>
+            <a href="profile.html" id="profileLink">Profile</a>
+            <button type="button" id="logoutButton" style="display:none; margin-left: 15px; padding: 8px 12px; background-color: #BC6C25; color: white; border: none; border-radius: 4px; cursor: pointer;">Logout</button>
         </div>
     </header>
 
     <main>
-
-
         <div class="left-column">
             <section class="resume-upload">
                 <h2>Upload Resume</h2>
@@ -48,59 +47,49 @@
             <section class="resume-list">
                 <h2>My Resumes</h2>
                 <ul id="resumeList">
-                    <!-- Example -->
-                    <li>
-                        resume_nurasyl.pdf
-                        <button class="btn view">View</button>
-                        <button class="btn download">Download</button>
-                        <button class="btn delete">Delete</button>
-                    </li>
+                    <li>Loading...</li>
                 </ul>
             </section>
         </div>
-
 
         <div class="right-column">
             <div class="resume-builder">
                 <h2>Build Resume</h2>
                 <form id="resumeForm">
-                    <input type="text" placeholder="Full Name" required>
-                    <input type="email" placeholder="Email" required>
-                    <input type="tel" placeholder="Phone Number" required>
-                    <textarea placeholder="Education"></textarea>
-                    <textarea placeholder="Work Experience"></textarea>
-                    <textarea placeholder="Skills"></textarea>
-                    <textarea placeholder="Summary"></textarea>
+                    <label for="resume_skills">Skills:</label>
+                    <textarea id="resume_skills" placeholder="Skills (e.g., Python, JavaScript, Project Management)" name="skills"></textarea>
+                    
+                    <label for="resume_experience">Work Experience:</label>
+                    <textarea id="resume_experience" placeholder="Work Experience (e.g., Job Title at Company X...)" name="experience"></textarea>
+                    
+                    <label for="resume_education">Education:</label>
+                    <textarea id="resume_education" placeholder="Education (e.g., Degree from University Y...)" name="education"></textarea>
+                    
+                    <label for="resume_experience_details">Summary/Experience Details:</label>
+                    <textarea id="resume_experience_details" placeholder="Summary or detailed experience points" name="experience_details"></textarea>
+                    
                     <button type="submit" class="btn">Generate Resume</button>
                 </form>
             </div>
         </div>
-
     </main>
+
     <footer>
         <div class="info">
-            <h3>
-                Contacts
-            </h3>
-            <h4>
-                Main Developer: Nurasyl Kydyrkozha
-            </h4>
-            <h4>
-                email: nyrdatychto@gmail.com
-            </h4>
+            <h3>Contacts</h3>
+            <h4>Main Developer: Nurasyl Kydyrkozha</h4>
+            <h4>email: nyrdatychto@gmail.com</h4>
         </div>
         <div class="rights">
-            <h3>
-                All rights are reserved
-            </h3>
+            <h3>All rights are reserved</h3>
         </div>
         <div class="copyright">
             <h3 id="year"></h3>
         </div>
     </footer>
 
-    <script src="scripts/index.js"></script>
-    <script src="scripts/connect.js"></script>
+    <script src="scripts/apiConfig.js"></script>
+    <script src="scripts/index.js"></script> 
+    <script src="scripts/resumes.js"></script>
 </body>
-
 </html>

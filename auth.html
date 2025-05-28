@@ -29,7 +29,7 @@
             <div class="auth-box_box">
                 <div id="regbtn" class="auth-box_box-lg">
                     <button id="reg">
-                        Sing up
+                        Sign up
                     </button>
                 </div>
                 <div id="loginbtn" class="auth-box_box-rg">
@@ -38,12 +38,12 @@
                     </button>
                 </div>
             </div>
-            <div id="sign_up">
-                <form action="" method="">
+            <div id="sign_up" style="display: none;">
+                <form id="signUpForm"> 
                     <label for="fname">First name:<br></label>
                     <input class="input_field" type="text" placeholder="example: John" id="fname" name="fname" required>
                     <label for="lname">Last name:</label>
-                    <input class="input_field" type="text" placeholder="example: Doe" id="lname" name="lname">
+                    <input class="input_field" type="text" placeholder="example: Doe" id="lname" name="lname" required>
                     <label for="email">Email:</label>
                     <input class="input_field" type="email" placeholder="example@mail.com" id="email" name="email" required>
 
@@ -55,29 +55,37 @@
                     <input class="input_field" type="password" id="pswrpt" name="pswrpt" required>
                     <input type="checkbox" onclick="togglePassword('pswrpt')"> Show Password
 
+                    <label for="role_register">I am a:</label>
+                    <select id="role_register" name="role" class="input_field" required>
+                        <option value="job_seeker" selected>Job Seeker</option>
+                        <option value="employer">Employer</option>
+                    </select>
+
                     <div class="auth-box_btn">
-                        <button onclick="validate()">Submit</button>
+                        <button type="button" onclick="validate()">Submit</button>
                     </div>
                 </form>
             </div>
-            <div id="sign_in">
-                <label for="email_sign_in">Email:<br></label>
-                <input class="input_field" type="email" placeholder="example@check.com" id="email_sign_in"
-                    name="email_sign_in" required>
+            <div id="sign_in" style="display: block;">
+                <form id="signInForm">
+                    <label for="email_sign_in">Email:<br></label>
+                    <input class="input_field" type="email" placeholder="example@check.com" id="email_sign_in"
+                        name="email_sign_in" required>
 
-                <label for="psw_sign_in">Password:<br></label>
-                <input class="input_field" type="password" id="psw_sign_in" name="psw_sign_in" required>
-                <input type="checkbox" onclick="togglePassword('psw_sign_in')"> Show Password
-                <a href="/forgot-password" class="forgot-password">Forgot password?</a>
+                    <label for="psw_sign_in">Password:<br></label>
+                    <input class="input_field" type="password" id="psw_sign_in" name="psw_sign_in" required>
+                    <input type="checkbox" onclick="togglePassword('psw_sign_in')"> Show Password
+                    <a href="#" class="forgot-password">Forgot password?</a>
 
-                <div class="auth-box_btn">
-                    <button onclick="validate()">Sign in</button>
-                </div>
+                    <div class="auth-box_btn">
+                        <button type="button" onclick="validate()">Sign in</button> 
+                    </div>
+                </form>
             </div>
         </div>
     </main>
-    <script src="scripts/connect.js"></script>
     <script src="scripts/auth.js"></script>
+    <script src="scripts/apiConfig.js"></script>
+    <script src="scripts/connect.js"></script>
 </body>
-
 </html>

@@ -1,76 +1,129 @@
-let flag = false;
+let authUiFormModeIsRegister = true; 
 
-function validate(){
-    if(flag){
-        register();
-    }else{
-        login();
+async function handleRegistration() {
+    const form = document.getElementById("signUpForm");
+    if (!form) { console.error("Sign up form not found (ID: signUpForm)"); return; }
+
+    const firstName = form.querySelector("#fname").value;
+    const lastName = form.querySelector("#lname").value;
+    const email = form.querySelector("#email").value;
+    const password = form.querySelector("#psw").value;
+    const passwordRepeat = form.querySelector("#pswrpt").value;
+    const roleSelect = form.querySelector("#role_register");
+    const role = roleSelect ? roleSelect.value : "job_seeker";
+
+    if (password !== passwordRepeat) {
+        alert("Passwords do not match!");
+        return;
     }
-}
+    if (!firstName || !lastName || !email || !password || !role) {
+        alert("Please fill in all required fields for registration.");
+        return;
+    }
 
-function register(){
-    const regdata = document.getElementById("sign_up");
-    let datas = regdata.children;
-    var flag1 = true;
-    for(let data of datas){
-        if(data.tagName == "INPUT"){
-            let x = data;
-            if(x.value == ""){
-                flag1 = false;
-                break;
-            }
+    try {
+        const response = await fetch(`${API_BASE_URL}/auth/register`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                name: firstName,
+                surname: lastName,
+                email: email,
+                password: password,
+                role: role
+            }),
+        });
+
+        const data = await response.json();
+        if (response.ok) {
+            localStorage.setItem('accessToken', data.access_token);
+            alert('Registration successful! Redirecting...');
+            window.location.href = "index.html";
+        } else {
+            alert(`Registration failed: ${data.detail || response.statusText || 'Unknown server error'}`);
         }
-    }
-    if(!flag1){
-        alert("Please try again! You may have not written information in all of the lanes!");
-    }else{
-        window.location.href = "index.html";
+    } catch (error) {
+        console.error('Registration error:', error);
+        alert('An error occurred during registration. Check console for details.');
     }
 }
 
-function login(){
-    const regdata = document.getElementById("sign_in");
-    let datas = regdata.children;
-    var flag1 = true;
-    for(let data of datas){
-        if(data.tagName == "INPUT"){
-            let x = data;
-            if(x.value == ""){
-                flag1 = false;
-                break;
-            }
+async function handleLogin() {
+    const form = document.getElementById("signInForm"); // Using ID from HTML
+    if (!form) { console.error("Sign in form not found (ID: signInForm)"); return; }
+
+    const email = form.querySelector("#email_sign_in").value;
+    const password = form.querySelector("#psw_sign_in").value;
+
+    if (!email || !password) {
+        alert("Please enter email and password for login.");
+        return;
+    }
+
+    const formData = new FormData();
+    formData.append('username', email);
+    formData.append('password', password);
+
+    try {
+        const response = await fetch(`${API_BASE_URL}/auth/login`, {
+            method: 'POST',
+            body: formData,
+        });
+
+        const data = await response.json();
+        if (response.ok) {
+            localStorage.setItem('accessToken', data.access_token);
+            alert('Login Successful! Redirecting...');
+            window.location.href = "index.html";
+        } else {
+            alert(`Login failed: ${data.detail || response.statusText || 'Unknown server error'}`);
         }
-    }
-    if(!flag1){
-        alert("Please try again! You may have not written information in all of the lanes!");
-    }else{
-        window.location.href = "index.html";
+    } catch (error) {
+        console.error('Login error:', error);
+        alert('An error occurred during login. Check console for details.');
     }
 }
 
-window.onload=function(){ 
-    var x = document.getElementById("loginbtn");
-    x.addEventListener("click", signin);
-    var y = document.getElementById("regbtn");
-    y.addEventListener("click", signup);
+function validate() {
+    if (authUiFormModeIsRegister) {
+        handleRegistration();
+    } else {
+        handleLogin();
+    }
 }
 
-function signup(){
-    let btn1 = document.getElementById("login");
-    btn1.style.backgroundColor = "rgb(0, 100, 255)";
-    let btn2 = document.getElementById("reg");
-    btn2.style.backgroundColor = "rgb(0, 80, 180)";
-    document.getElementById("sign_in").style.display = "none";
-    flag = true;
-    document.getElementById("sign_up").style.display = "block";
+function showSignUpFormUI() {
+    const btnLoginTab = document.getElementById("login");
+    const btnRegTab = document.getElementById("reg");
+    const signInContainer = document.getElementById("sign_in");
+    const signUpContainer = document.getElementById("sign_up");
+
+    if (btnLoginTab) btnLoginTab.style.backgroundColor = "rgb(0, 100, 255)";
+    if (btnRegTab) btnRegTab.style.backgroundColor = "rgb(0, 80, 180)";
+    if (signInContainer) signInContainer.style.display = "none";
+    if (signUpContainer) signUpContainer.style.display = "block";
+    authUiFormModeIsRegister = true;
 }
 
-function signin(){
-    let btn1 = document.getElementById("reg");
-    btn1.style.backgroundColor = "rgb(0, 100, 255)";
-    let btn2 = document.getElementById("login");
-    btn2.style.backgroundColor = "rgb(0, 80, 180)";
-    document.getElementById("sign_in").style.display = "block";
-    document.getElementById("sign_up").style.display = "none";
-    flag = false;
+function showSignInFormUI() {
+    const btnRegTab = document.getElementById("reg");
+    const btnLoginTab = document.getElementById("login");
+    const signInContainer = document.getElementById("sign_in");
+    const signUpContainer = document.getElementById("sign_up");
+
+    if (btnRegTab) btnRegTab.style.backgroundColor = "rgb(0, 100, 255)";
+    if (btnLoginTab) btnLoginTab.style.backgroundColor = "rgb(0, 80, 180)";
+    if (signInContainer) signInContainer.style.display = "block";
+    if (signUpContainer) signUpContainer.style.display = "none";
+    authUiFormModeIsRegister = false;
 }
+
+window.addEventListener('DOMContentLoaded', () => {
+    const loginTabButtonWrapper = document.getElementById("loginbtn");
+    const regTabButtonWrapper = document.getElementById("regbtn");
+
+    if (loginTabButtonWrapper) loginTabButtonWrapper.querySelector('button')?.addEventListener("click", showSignInFormUI);
+    if (regTabButtonWrapper) regTabButtonWrapper.querySelector('button')?.addEventListener("click", showSignUpFormUI);
+    
+    showSignInFormUI(); 
+});

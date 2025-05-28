@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const changeStatus = (event) => {
         const statusElement = event.target;
-        const currentStatus = statusElement.classList[1]; // Get current status class
+        const currentStatus = statusElement.classList[1]; 
 
         const statusCycle = ['accepted', 'under-consideration', 'rejected', 'unseen'];
         const nextStatus = statusCycle[(statusCycle.indexOf(currentStatus) + 1) % statusCycle.length];
